@@ -2,35 +2,3 @@
   text-align: center;
 }
 
-.Nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(71, 83, 87);
-  color: white;
-}
-
-.Nav ul {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-  list-style: none;
-}
-
-.shop-body {
-  background-color: whitesmoke;
-}
-
-.digimon-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.one-digimon-box {
-  border: 1px solid black;
-  border-radius: 10px;
-  margin: 15px;
-  background-color: white;
-  box-shadow: 0px 6px 12px -5px rgba(0, 0, 0, 0.75);
-}

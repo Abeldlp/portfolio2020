@@ -1,26 +1,18 @@
-import React from "react";
-import "./App.css";
-import Nav from "./pages/Nav";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from "./pages/About";
-import Shop from "./pages/Shop";
+import "./App.css";
 import Home from "./pages/Home";
-import Digimondetails from "./pages/Digimondetails";
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/shop" exact component={Shop} />
-          <Route path="/shop/:id" component={Digimondetails} />
-        </Switch>
-      </Router>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Main App</h1>
+      </div>
+    );
+  }
 }
-
-export default App;
