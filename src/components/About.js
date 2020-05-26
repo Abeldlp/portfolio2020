@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
 
+import computer from "../PorfolioImages/computer.png";
+import snowboard from "../PorfolioImages/Snowboard.jpg";
+import guitar from "../PorfolioImages/guitar.png";
+
 export default class About extends Component {
   pageTransition = {
     in: {
@@ -27,14 +31,46 @@ export default class About extends Component {
         variants={this.pageTransition}
         transition={this.pageSettings}
       >
-        <h1>About</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iusto
-          laboriosam sint nemo porro error, nostrum soluta voluptates, itaque
-          consectetur aliquam enim natus hic saepe dolorum sit alias ullam
-          doloribus odit reiciendis! Magnam, temporibus?
-        </p>
+        <h1>Personal_Me</h1>
+        <div style={styles.divleft}>
+          <p>
+            I love programing since the first time I tried it. I fell in love
+            with web development but in my spare time I also develop videogames
+            with unity, just for fun.
+          </p>
+          <img src={computer} style={styles.computer} />
+        </div>
+        <div style={styles.divleft}>
+          <img src={snowboard} style={styles.computer} />
+          <p>
+            Yes! That is me! I love snowboarding and also spent 5 years of my
+            life as a proffesional snowboarder. The sensation of going down the
+            mountain and flying off every jump is just irreplacable
+          </p>
+        </div>
+        <div style={styles.divleft}>
+          <p>
+            Music is something I loved since a really young age. I started
+            playing guitar since I was 11 and have never stoped since then. A
+            good tune is always relaxing in stressful times.
+          </p>
+          <img src={guitar} style={styles.computer} />
+        </div>
       </motion.div>
     );
   }
 }
+
+const styles = {
+  divleft: {
+    display: "flex",
+    justifyContent: "space-around",
+    width: "90%",
+    height: "20%",
+    padding: 20,
+  },
+  computer: {
+    height: "100%",
+    borderRadius: 10,
+  },
+};

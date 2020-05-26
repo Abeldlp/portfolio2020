@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../PorfolioImages/logo.png";
 
-
 export default class SelfIntro extends Component {
   render() {
     return (
@@ -36,6 +35,10 @@ const styles = {
   logo: {
     width: 80,
     height: 80,
+    padding: 20,
+    position: "relative",
+    left: "25%",
+    zIndex: 1,
   },
   fontStyle1: {
     color: "white",
