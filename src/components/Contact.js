@@ -4,6 +4,7 @@ import facebookicon from "../icons/facebook.png";
 import githubicon from "../icons/github.png";
 import linkedinicon from "../icons/linkedin.png";
 import instagramicon from "../icons/instagram.png";
+import axios from "axios";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -46,14 +47,20 @@ export default class Contact extends Component {
     });
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     this.setState({
       name: "",
       email: "",
       subject: "",
       message: "",
+    });
+
+    const form = await axios.post("http://localhost:3001/api/message", {
+      name: this.state.name,
+      email: this.state.email,
+      subject: this.state.subject,
+      message: this.state.message,
     });
   }
 
@@ -118,7 +125,7 @@ export default class Contact extends Component {
             required
           ></textarea>
           <input
-            style={styles.sendbutton}
+            id="sendbutton"
             type="submit"
             value="Send"
             onClick={this.handleSubmit}

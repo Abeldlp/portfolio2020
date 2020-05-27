@@ -25,7 +25,7 @@
   background-size: cover;
   background-position: center;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,4 +75,25 @@
 
 #nav-item:hover {
   border-bottom: solid 2px rgba(255, 255, 255, 1);
+}
+
+/*CONTACT FORM*/
+
+#sendbutton {
+  -webkit-appearance: none;
+  padding: 10px;
+  outline: none;
+  color: white;
+  border-radius: 18px;
+  background-color: dodgerblue;
+  border: none;
+  cursor: pointer;
+
+  /*padding: 10,
+    outline: "none",
+    borderRadius: 18,
+    color: "white",
+    backgroundColor: "dodgerblue",
+    border: "none",
+    cursor: "pointer",*/
 }

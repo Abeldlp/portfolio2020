@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import computer from "../PorfolioImages/computer.png";
 import snowboard from "../PorfolioImages/Snowboard.jpg";
-import guitar from "../PorfolioImages/guitar.png";
+import guitar from "../PorfolioImages/guitar2.png";
 
 export default class About extends Component {
   pageTransition = {
@@ -54,7 +54,7 @@ export default class About extends Component {
             playing guitar since I was 11 and have never stoped since then. A
             good tune is always relaxing in stressful times.
           </p>
-          <img src={guitar} style={styles.computer} />
+          <img src={guitar} style={styles.guitar} />
         </div>
       </motion.div>
     );
@@ -72,5 +72,9 @@ const styles = {
   computer: {
     height: "100%",
     borderRadius: 10,
+  },
+  guitar: {
+    opacity: 0.9,
+    height: "100%",   
   },
 };
