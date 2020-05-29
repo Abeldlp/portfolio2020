@@ -41,12 +41,16 @@ export default class Me extends Component {
         <h1>Dev_Me</h1>
 
         <div style={styles.image_container}>
-          <img style={styles.image} src={html} />
-          <img style={styles.image} src={css} />
-          <img style={styles.image} src={javascript} />
-          <img style={styles.image} src={mongo} />
-          <img style={styles.image} src={reactimage} />
-          <img style={styles.image} src={node} />
+          <div style={styles.image_container_row}>
+            <img style={styles.image} src={html} alt="logo" />
+            <img style={styles.image} src={css} alt="logo" />
+            <img style={styles.image} src={javascript} alt="logo" />
+          </div>
+          <div style={styles.image_container_row}>
+            <img style={styles.image} src={mongo} alt="logo" />
+            <img style={styles.image} src={reactimage} alt="logo" />
+            <img style={styles.image} src={node} alt="logo" />
+          </div>
         </div>
         <h2 style={styles.p}>GIVE ME THE FULLSTACK!</h2>
         <p style={styles.p}>
@@ -66,10 +70,10 @@ const styles = {
   },
   image_container: {
     backgroundColor: "white",
-    width: "80%",
-    height: "20%",
+    padding: 20,
     display: "flex",
     justifyContent: "space-around",
+    flexDirection: "column",
     alignItems: "center",
     borderRadius: 18,
     boxShadow: "0px 3px 10px 0px grey",

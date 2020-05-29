@@ -38,10 +38,10 @@ export default class About extends Component {
             with web development but in my spare time I also develop videogames
             with unity, just for fun.
           </p>
-          <img src={computer} style={styles.computer} />
+          <img src={computer} style={styles.computer} alt="logo" />
         </div>
         <div style={styles.divleft}>
-          <img src={snowboard} style={styles.computer} />
+          <img src={snowboard} style={styles.computer} alt="logo" />
           <p>
             Yes! That is me! I love snowboarding and also spent 5 years of my
             life as a proffesional snowboarder. The sensation of going down the
@@ -54,7 +54,7 @@ export default class About extends Component {
             playing guitar since I was 11 and have never stoped since then. A
             good tune is always relaxing in stressful times.
           </p>
-          <img src={guitar} style={styles.guitar} />
+          <img src={guitar} style={styles.guitar} alt="logo" />
         </div>
       </motion.div>
     );
@@ -75,6 +75,6 @@ const styles = {
   },
   guitar: {
     opacity: 0.9,
-    height: "100%",   
+    height: "100%",
   },
 };

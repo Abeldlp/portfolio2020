@@ -4,6 +4,7 @@ import facebookicon from "../icons/facebook.png";
 import githubicon from "../icons/github.png";
 import linkedinicon from "../icons/linkedin.png";
 import instagramicon from "../icons/instagram.png";
+import sent_icon from "../PorfolioImages/sent_icon.png";
 import axios from "axios";
 
 export default class Contact extends Component {
@@ -14,6 +15,7 @@ export default class Contact extends Component {
       email: "",
       subject: "",
       message: "",
+      sent: false,
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -54,9 +56,9 @@ export default class Contact extends Component {
       email: "",
       subject: "",
       message: "",
+      sent: true,
     });
-
-    const form = await axios.post("http://localhost:3001/api/message", {
+    await axios.post("http://localhost:3001/api/message", {
       name: this.state.name,
       email: this.state.email,
       subject: this.state.subject,
@@ -79,78 +81,110 @@ export default class Contact extends Component {
     duration: 1,
     transition: "linear",
   };
+
   render() {
-    return (
-      <motion.div
-        className="secondary-screen"
-        exit="out"
-        animate="in"
-        initial="out"
-        variants={this.pageTransition}
-        transition={this.pageSettings}
-      >
-        <h1>Contact</h1>
-        <form style={styles.formstyle}>
-          <input
-            style={styles.formitem}
-            type="text"
-            placeholder="Name..."
-            value={this.state.name}
-            onChange={this.handleNameChange}
-            required
-          />
-          <input
-            style={styles.formitem}
-            type="email"
-            placeholder="Email..."
-            value={this.state.email}
-            onChange={this.handleEmailChange}
-            required
-          />
-          <input
-            style={styles.formitem}
-            type="text"
-            placeholder="Subject..."
-            value={this.state.subject}
-            onChange={this.handleSubjectChange}
-            required
-          />
-          <textarea
-            cols="30"
-            rows="10"
-            placeholder="Drop me your message"
-            style={styles.formitem}
-            value={this.state.message}
-            onChange={this.handleMessageChange}
-            required
-          ></textarea>
-          <input
-            id="sendbutton"
-            type="submit"
-            value="Send"
-            onClick={this.handleSubmit}
-          />
-        </form>
-        <p>Or add me directly on wassap: +31 627 193 590</p>
-        <div style={styles.sns}>
-          <a href="https://www.facebook.com/kenny.delapaz" target="_blank">
-            <img src={facebookicon} />
-          </a>
-          <a href="https://www.instagram.com/abeldlp193/" target="_blank">
-            <img src={instagramicon} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/abel-de-la-paz-73b675187/"
-            target="_blank"
-          >
-            <img src={linkedinicon} />
-          </a>
-          <a href="https://github.com/Abeldlp" target="_blank">
-            <img src={githubicon} />
-          </a>
-        </div>
-      </motion.div>
-    );
+    if (!this.state.sent) {
+      return (
+        <motion.div
+          className="secondary-screen"
+          exit="out"
+          animate="in"
+          initial="out"
+          variants={this.pageTransition}
+          transition={this.pageSettings}
+        >
+          <h1>Contact</h1>
+          <form style={styles.formstyle}>
+            <input
+              style={styles.formitem}
+              type="text"
+              placeholder="Name..."
+              value={this.state.name}
+              onChange={this.handleNameChange}
+              required
+            />
+            <input
+              style={styles.formitem}
+              type="email"
+              placeholder="Email..."
+              value={this.state.email}
+              onChange={this.handleEmailChange}
+              required
+            />
+            <input
+              style={styles.formitem}
+              type="text"
+              placeholder="Subject..."
+              value={this.state.subject}
+              onChange={this.handleSubjectChange}
+              required
+            />
+            <textarea
+              cols="30"
+              rows="10"
+              placeholder="Drop me your message"
+              style={styles.formitem}
+              value={this.state.message}
+              onChange={this.handleMessageChange}
+              required
+            ></textarea>
+            <input
+              id="sendbutton"
+              type="submit"
+              value="Send"
+              onClick={this.handleSubmit}
+            />
+          </form>
+          <p>Or add me directly on wassap: +31 627 193 590</p>
+          <div style={styles.sns}>
+            <a
+              href="https://www.facebook.com/kenny.delapaz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={facebookicon} alt="logo" />
+            </a>
+            <a
+              href="https://www.instagram.com/abeldlp193/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagramicon} alt="logo" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abel-de-la-paz-73b675187/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedinicon} alt="logo" />
+            </a>
+            <a
+              href="https://github.com/Abeldlp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={githubicon} alt="logo" />
+            </a>
+          </div>
+        </motion.div>
+      );
+    } else if (this.state.sent) {
+      return (
+        <motion.div
+          className="secondary-screen"
+          exit="out"
+          animate="in"
+          initial="out"
+          variants={this.pageTransition}
+          transition={this.pageSettings}
+        >
+          <h1>Thank you!</h1>
+          <img src={sent_icon} style={styles.sent_icon} alt="logo" />
+          <h2>Your message has been sent</h2>
+          <h2>I will get back to you as soon as possible</h2>
+        </motion.div>
+      );
+    }
   }
 }
 
@@ -183,5 +217,8 @@ const styles = {
     display: "flex",
     justifyContent: "space-around",
     paddingBottom: "10px",
+  },
+  sent_icon: {
+    height: "200px",
   },
 };

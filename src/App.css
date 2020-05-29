@@ -62,7 +62,7 @@
   text-align: center;
   cursor: pointer;
   font-size: 18px;
-  color: white;
+  color: dodgerblue;
   border-bottom: solid 2px rgba(255, 255, 255, 0);
   text-decoration: none;
   display: flex;
@@ -74,7 +74,7 @@
 }
 
 #nav-item:hover {
-  border-bottom: solid 2px rgba(255, 255, 255, 1);
+  border-bottom: solid 2px dodgerblue;
 }
 
 /*CONTACT FORM*/
