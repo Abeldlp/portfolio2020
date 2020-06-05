@@ -54,10 +54,16 @@ export default class Me extends Component {
         </div>
         <h2 style={styles.p}>GIVE ME THE FULLSTACK!</h2>
         <p style={styles.p}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iste cum,
-          eos maxime voluptatibus aliquid reprehenderit natus ratione nemo
-          iusto, dolores facilis vitae. Similique dolor, voluptates iusto quas
-          beatae necessitatibus!
+          Since the day I sarted coding I knew I wanted no matter what I learned
+          it never was enough. Ever since, has been a battle for learning new
+          libraries and frameworks to make myself a better developer. I sarted
+          with a HTML, CSS, JAVASCRIPT, and then moved on to the backend,
+          NODE.js and EXPRESS. Then I started using databases with SQL, but
+          never felt like that was interesting enough.Finally I started using
+          React for frontend and MongoDB for Database management.
+          <hr />
+          Normally I work with the MERN Stack, MongoDB, EXPRESS, React and
+          Node.js but wouldnt mind to learn a different source if neccesary.
         </p>
       </motion.div>
     );

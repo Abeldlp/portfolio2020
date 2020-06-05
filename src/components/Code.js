@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 //IMAGES IMPORT HOLDER
 import html from "../PorfolioImages/html.png";
 import css from "../PorfolioImages/css.png";
-import javascript from "../PorfolioImages/javascript.png";
-import mongo from "../PorfolioImages/mongo.png";
-import node from "../PorfolioImages/node.png";
-import reactimage from "../PorfolioImages/react.png";
 
 export default class Code extends Component {
   constructor(props) {
@@ -62,95 +59,71 @@ export default class Code extends Component {
         variants={this.pageTransition}
         transition={this.pageSettings}
       >
-        <h1>CodePage</h1>
-        <p>
-          There are pages within this code section that will be visible. There
-          are others that you will only be able to see the code pushed to
-          github.
+        <h1>Projects</h1>
+        <p style={{ width: "80%", paddingBottom: 10 }}>
+          Sample projects of frontend and backend services
         </p>
         <div style={styles.main_container}>
-          {/*
-          {this.state.projects.map((project) => (
+          <Link to="/code/fitness" style={styles.link}>
             <div
               style={styles.secondary_container}
               onMouseEnter={this.handleHover}
               onMouseLeave={this.handleHoverOut}
             >
-              {project.name}
-              <p>{project.backorFront}</p>
-              <div style={{ display: "flex" }}>
-                {this.state.projects.icons.map((icon) => (
-                  <img src={icon} style={styles.icon} alt="logo" />
-                ))}
-              </div>
+              FITNESS APP
             </div>
-          ))}*/}
-
-          <div
-            style={styles.secondary_container}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHoverOut}
-          >
-            FITNESS RECORD
-            <p>frontend - backend</p>
-            <div style={{ display: "flex" }}>
-              <img src={reactimage} style={styles.icon} alt="logo" />
-              <img src={mongo} style={styles.icon} alt="logo" />
-              <img src={node} style={styles.icon} alt="logo" />
+          </Link>
+          <Link to="/code/school" style={styles.link}>
+            <div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+            >
+              SCHOOL WEBSITE
             </div>
-          </div>
-          <div
-            style={styles.secondary_container}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHoverOut}
-          >
-            SCHOOL WEBSITE
-            <p>frontend - backend</p>
-            <div style={{ display: "flex" }}>
-              <img src={html} style={styles.icon} alt="logo" />
-              <img src={css} style={styles.icon} alt="logo" />
+          </Link>
+          <Link to="/code/construction" style={styles.link}>
+            <div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+            >
+              CONSTRUCTION
             </div>
-          </div>
-          <div
-            style={styles.secondary_container}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHoverOut}
-          >
-            CONSTRUCTION
-            <p>frontend</p>
-            <div style={{ display: "flex" }}>
-              <img src={html} style={styles.icon} alt="logo" />
-              <img src={css} style={styles.icon} alt="logo" />
-              <img src={javascript} style={styles.icon} alt="logo" />
+          </Link>
+          <Link to="/code/jab" style={styles.link}>
+            <div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+            >
+              JAB
             </div>
-          </div>
-          <div
-            style={styles.secondary_container}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHoverOut}
-          >
-            JAB
-            <p>backend</p>
-            <div style={{ display: "flex" }}>
-              <img src={node} style={styles.icon} alt="logo" />
-              <img src={mongo} style={styles.icon} alt="logo" />
+          </Link>
+          <Link to="/code/last" style={styles.link}>
+            <div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+            >
+              LAST ONE
             </div>
-          </div>
-          <div
-            style={styles.secondary_container}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHoverOut}
-          >
-            Project 1
-          </div>
-          <div
-            style={styles.secondary_container}
-            onMouseEnter={this.handleHover}
-            onMouseLeave={this.handleHoverOut}
-          >
-            Project 1
-          </div>
+          </Link>
+          <Link to="/code/tri" style={styles.link}>
+            <div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+            >
+              TRIGERED
+            </div>
+          </Link>
         </div>
+        <p style={{ width: "80%", paddingBottom: 10 }}>
+          There are pages within this code section that will be visible. There
+          are others that you will only be able to see the code pushed to
+          github.
+        </p>
       </motion.div>
     );
   }
@@ -166,8 +139,8 @@ const styles = {
     flexWrap: "wrap",
   },
   secondary_container: {
-    width: "30%",
-    height: "30%",
+    width: "100%",
+    height: "100%",
     borderRadius: 18,
     display: "flex",
     flexDirection: "column",
@@ -176,8 +149,30 @@ const styles = {
     cursor: "pointer",
     transition: "all ease-in-out 0.2s",
     boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.5)",
+    background:
+      "linear-gradient(124deg, rgba(73,70,128,1) 0%, rgba(132,132,203,1) 52%, rgba(0,212,255,1) 100%) fixed",
+    color: "white",
   },
   icon: {
     height: "30px",
+  },
+  anchors: {
+    textDecoration: "none",
+    color: "white",
+  },
+  laptop: {
+    position: "absolute",
+    top: "30%",
+    width: "100%",
+    zIndex: -1,
+  },
+  link: {
+    width: "150px",
+    height: "150px",
+    borderRadius: 18,
+    textDecoration: "none",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 };
