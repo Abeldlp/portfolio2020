@@ -9,10 +9,10 @@ export default class SelfIntro extends Component {
       <div className="self-part">
         <img src={logo} style={styles.logo} alt="logo" />
         {/* IMAGE TO COVER FULL SCREEN <div className="self-portrait"></div>*/}
-        <img src={serMe} style={styles.selfMe} alt="logo" />
+        {/*<img src={serMe} style={styles.selfMe} alt="logo" /> */}
         <div className="intro-text">
           <h1 style={styles.fontStyle1}>ABEL DLP</h1>
-          <h1 style={styles.fontStyle2}>#Web.developer_</h1>
+          <h1 style={styles.fontStyle2}>Web Developer</h1>
         </div>
         <div className="navbar" style={styles.navbar}>
           <Link to="/" id="nav-item">
@@ -22,7 +22,7 @@ export default class SelfIntro extends Component {
             About
           </Link>
           <Link to="/code" id="nav-item">
-            Code
+            Projects
           </Link>
           <Link to="/contact" id="nav-item">
             Contact
@@ -39,7 +39,7 @@ const styles = {
     height: 80,
     padding: 20,
     position: "relative",
-    left: "25%",
+    top:"10%",
     zIndex: 1,
   },
   selfMe: {
@@ -55,13 +55,16 @@ const styles = {
     fontSize: 50,
     letterSpacing: 5,
     position: "relative",
-    top: 25,
+    fontFamily: "Montserrat",
+    
   },
   fontStyle2: {
     color: "white",
     fontSize: 30,
     position: "relative",
+    fontFamily: "Montserrat",
     left: 50,
+    bottom: 25,
   },
   navbar: {
     width: "100%",
@@ -69,6 +72,7 @@ const styles = {
     justifyContent: "space-around",
     marginBottom: 20,
     position: "relative",
+    fontFamily: "Montserrat",
     backgroundColor: "rgba(255, 255, 255, 0.7)",
     opacity: 1,
   },

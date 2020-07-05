@@ -8,6 +8,7 @@ import javascript from "../PorfolioImages/javascript.png";
 import mongo from "../PorfolioImages/mongo.png";
 import node from "../PorfolioImages/node.png";
 import reactimage from "../PorfolioImages/react.png";
+import express from "../PorfolioImages/express.png";
 
 //--------------------
 
@@ -38,33 +39,61 @@ export default class Me extends Component {
         variants={this.pageTransition}
         transition={this.pageSettings}
       >
-        <h1>Dev_Me</h1>
+        <h1
+          style={{
+            fontFamily: "Montserrat",
+          }}
+        >
+          <span style={{ color: "dodgerblue", fontSize: "30px" }}>Fullstack</span>
+          Web Developer
+          <span style={{ color: "dodgerblue", fontSize: "40px" }}>-</span>
+        </h1>
+        {/*CARREER SECTION*/}
+        <h3 style={styles.p}>
+          Path<span style={{ color: "dodgerblue", fontSize: "60px" }}>.</span>
+        </h3>
 
-        <div style={styles.image_container}>
-          <div style={styles.image_container_row}>
-            <img style={styles.image} src={html} alt="logo" />
-            <img style={styles.image} src={css} alt="logo" />
-            <img style={styles.image} src={javascript} alt="logo" />
+        <p style={styles.p}>
+          Fullstack web developer with an enphasys on responsive design.
+          <br />
+          Able to maintain clean and reusable code troughout the project.
+          <br />
+          Following the less is more rule design.
+          <br />
+          Always willing to learn for new libraries for a project.
+        </p>
+        <h3 style={styles.p}>
+          <span style={{ color: "dodgerblue" }}>-</span>Skills
+          <span style={{ color: "dodgerblue" }}>-</span>
+        </h3>
+        <div style={styles.image_container_master}>
+          {/*FRONTEND SECTION*/}
+          <div style={styles.frontbackcontainer}>
+            <h3 style={styles.p}>Frontend</h3>
+            <div style={styles.image_container}>
+              <img style={styles.image} src={html} alt="logo" />
+              <img style={styles.image} src={css} alt="logo" />
+              <img style={styles.image} src={javascript} alt="logo" />
+              <img style={styles.image} src={reactimage} alt="logo" />
+            </div>
           </div>
-          <div style={styles.image_container_row}>
-            <img style={styles.image} src={mongo} alt="logo" />
-            <img style={styles.image} src={reactimage} alt="logo" />
-            <img style={styles.image} src={node} alt="logo" />
+
+          {/*BACKEND SECTION*/}
+          <div style={styles.frontbackcontainer}>
+            <h3 style={styles.p}>Backend</h3>
+            <div style={styles.image_container}>
+              <img style={styles.image} src={mongo} alt="logo" />
+              <img style={styles.image} src={node} alt="logo" />
+              <img style={styles.image} src={express} alt="logo" />
+            </div>
           </div>
         </div>
-        <h2 style={styles.p}>GIVE ME THE FULLSTACK!</h2>
+        {/*<h3 style={styles.p}>MERN</h3>
         <p style={styles.p}>
-          Since the day I sarted coding I knew I wanted no matter what I learned
-          it never was enough. Ever since, has been a battle for learning new
-          libraries and frameworks to make myself a better developer. I sarted
-          with a HTML, CSS, JAVASCRIPT, and then moved on to the backend,
-          NODE.js and EXPRESS. Then I started using databases with SQL, but
-          never felt like that was interesting enough.Finally I started using
-          React for frontend and MongoDB for Database management.
-          <hr />
-          Normally I work with the MERN Stack, MongoDB, EXPRESS, React and
-          Node.js but wouldnt mind to learn a different source if neccesary.
-        </p>
+          Most of the applications or websites I make are created using the MERN
+          Stack, React.js for the Frontend, Express.js and Node.js for the
+          Backend and MongoDB as Database.
+        </p>*/}
       </motion.div>
     );
   }
@@ -72,22 +101,38 @@ export default class Me extends Component {
 
 const styles = {
   p: {
-    width: "90%",
+    width: "80%",
+    fontFamily: "Roboto",
   },
   image_container: {
-    backgroundColor: "white",
-    padding: 20,
+    padding: 10,
     display: "flex",
     justifyContent: "space-around",
-    flexDirection: "column",
     alignItems: "center",
-    borderRadius: 18,
-    boxShadow: "0px 3px 10px 0px grey",
   },
   image: {
-    height: 80,
+    height: "2.5rem",
   },
   photome: {
     height: "100%",
+  },
+  image_container_master: {
+    width: "80%",
+    margin: "auto",
+    display: "flex",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
+  },
+  frontbackcontainer: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    padding: "20px",
+    borderRadius: "15px",
+    border: "1px solid dodgerblue",
+    //backgroundColor:"rgba(30, 143, 255, 0.2)"
   },
 };

@@ -6,6 +6,8 @@ import snowboard from "../PorfolioImages/Snowboard.jpg";
 import guitar from "../PorfolioImages/guitar2.png";
 import languages from "../PorfolioImages/languages.png";
 
+import serMe from "../PorfolioImages/no-background-big-touched.png";
+
 export default class About extends Component {
   pageTransition = {
     in: {
@@ -32,21 +34,32 @@ export default class About extends Component {
         variants={this.pageTransition}
         transition={this.pageSettings}
       >
-        <h1>Personal_Me</h1>
+        <h1 style={{ fontFamily: "Montserrat" }}>
+          Personal Info
+          <span style={{ color: "dodgerblue", fontSize: "60px" }}>.</span>
+        </h1>
+        <div style={styles.divleft}>
+          <img src={serMe} style={styles.serMe} alt="logo" />
+          <p style={styles.p}>
+            Abel de la Paz (AbelDLP)
+            <br /> I was born in Spain and raised in Tokyo. This gave me the
+            oportunity to think outside the box, since I have never been in a
+            box.
+          </p>
+        </div>
+
         <div style={styles.divleft}>
           <img src={languages} style={styles.languages} alt="logo" />
           <p style={styles.p}>
-            Languages is one of my favorite things to learn. Currently I speak
-            English, Spanish, Japanese, French, Chinese and a bit of Dutch
+            I speak English, Japanese, Spanish, French, some Chinese and a bit
+            of Dutch.
           </p>
         </div>
         <div style={styles.divleft}>
-          <p style={styles.p}>
-            I love programing since the first time I tried it. I fell in love
-            with web development but in my spare time I also develop videogames
-            with unity, just for fun.
-          </p>
           <img src={computer} style={styles.computer} alt="logo" />
+          <p style={styles.p}>
+            Apart from web development, I also develop games for fun. (Unity, C#)
+          </p>
         </div>
         <div style={styles.divleft}>
           <img src={snowboard} style={styles.computer} alt="logo" />
@@ -77,11 +90,11 @@ const styles = {
     width: "80%",
     minHeight: "20%",
     padding: 20,
-    marginBottom: 10,
-    borderRadius: 18,
+    marginBottom: 15,
+    borderBottom: "1px solid dodgerblue",
   },
   computer: {
-    height: "100%",
+    height: "40%",
     borderRadius: 10,
   },
   guitar: {
@@ -91,9 +104,15 @@ const styles = {
   p: {
     width: "70%",
     padding: "0px 20px",
+    fontFamily: "Roboto",
+    textAlign: "left",
   },
   languages: {
-    height: "100%",
+    height: "70%",
     opacity: 0.8,
+  },
+  serMe: {
+    height: "100%",
+    borderRadius: "100%",
   },
 };
