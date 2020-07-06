@@ -42,7 +42,9 @@ export default class Construction extends Component {
           for the backend. This is an old project but I comepletely rebuilt it
           on React for a more app like looking.
         </p>
-        <a href="">View Live website</a>
+        <a href="https://constructionfjd.herokuapp.com/" target="_blank">
+          View Live website
+        </a>
         <br />
         <a href="">View source code</a>
       </motion.div>

@@ -2,25 +2,11 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-//IMAGES IMPORT HOLDER
-import html from "../PorfolioImages/html.png";
-import css from "../PorfolioImages/css.png";
-
 export default class Code extends Component {
   constructor(props) {
     super(props);
     this.handleHover = this.handleHover.bind(this);
     this.handleHoverOut = this.handleHoverOut.bind(this);
-
-    this.state = {
-      projects: [
-        {
-          name: "INTRO",
-          backorFront: "Frontend",
-          icons: [{ icon: html }, { icon: css }],
-        },
-      ],
-    };
   }
 
   pageTransition = {
@@ -37,7 +23,6 @@ export default class Code extends Component {
   pageSettings = {
     duration: 1,
     transition: "linear",
-    staggerChildren: 0.1,
   };
 
   handleHover(e) {
@@ -59,71 +44,121 @@ export default class Code extends Component {
         variants={this.pageTransition}
         transition={this.pageSettings}
       >
-        <h1>Projects</h1>
-        <p style={{ width: "80%", paddingBottom: 10 }}>
-          Sample projects of frontend and backend services
+        <h1 style={{ fontFamily: "Montserrat", color: "dodgerblue" }}>
+          Projects
+        </h1>
+        <p style={{ width: "80%", paddingBottom: 10, fontFamily: "Roboto" }}>
+          Fullstack, Frontend and Desings
         </p>
-        <div style={styles.main_container}>
-          <Link to="/code/fitness" style={styles.link}>
-            <div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-            >
-              FITNESS APP
-            </div>
-          </Link>
-          <Link to="/code/school" style={styles.link}>
-            <div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-            >
-              SCHOOL WEBSITE
-            </div>
-          </Link>
-          <Link to="/code/construction" style={styles.link}>
-            <div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-            >
-              CONSTRUCTION
-            </div>
-          </Link>
-          <Link to="/code/jab" style={styles.link}>
-            <div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-            >
-              JAB
-            </div>
-          </Link>
-          <Link to="/code/last" style={styles.link}>
-            <div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-            >
-              LAST ONE
-            </div>
-          </Link>
-          <Link to="/code/tri" style={styles.link}>
-            <div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-            >
-              TRIGERED
-            </div>
-          </Link>
-        </div>
-        <p style={{ width: "80%", paddingBottom: 10 }}>
+        <p style={{ width: "80%", paddingBottom: 10, fontFamily: "Roboto" }}>
           There are pages within this code section that will be visible. There
           are others that you will only be able to see the code pushed to
           github.
         </p>
+        <motion.div style={styles.main_container}>
+          <Link to="/code/fitness" style={styles.link}>
+            <motion.div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1 }}
+            >
+              FITNESS APP
+              <br />
+              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
+                Fullstack
+              </span>
+            </motion.div>
+          </Link>
+          <Link to="/code/school" style={styles.link}>
+            <motion.div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.1 }}
+            >
+              SCHOOL WEBSITE
+              <br />
+              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
+                Frontend
+              </span>
+            </motion.div>
+          </Link>
+          <Link to="/code/construction" style={styles.link}>
+            <motion.div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.2 }}
+            >
+              CONSTRUCTION
+              <br />
+              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
+                Frontend
+              </span>
+            </motion.div>
+          </Link>
+          <Link to="/code/salarysystem" style={styles.link}>
+            <motion.div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1 }}
+            >
+              SALARY MANAGER
+              <br />
+              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
+                Fullstack
+              </span>
+            </motion.div>
+          </Link>
+          <Link to="/code/last" style={styles.link}>
+            <motion.div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.1 }}
+            >
+              LA FERRARI
+              <br />
+              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
+                Design
+              </span>
+            </motion.div>
+          </Link>
+          <Link to="/code/tri" style={styles.link}>
+            <motion.div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.2 }}
+            >
+              TRIGERED
+              <br />
+              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
+                Frontend
+              </span>
+            </motion.div>
+          </Link>
+        </motion.div>
       </motion.div>
     );
   }
@@ -141,7 +176,6 @@ const styles = {
   secondary_container: {
     width: "100%",
     height: "100%",
-    borderRadius: 18,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -149,9 +183,13 @@ const styles = {
     cursor: "pointer",
     transition: "all ease-in-out 0.2s",
     boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.5)",
-    background:
-      "linear-gradient(124deg, rgba(73,70,128,1) 0%, rgba(132,132,203,1) 52%, rgba(0,212,255,1) 100%) fixed",
-    color: "white",
+    background: "white",
+    color: "black",
+    fontFamily: "Roboto",
+    borderBottomLeftRadius: "10px",
+    borderBottomRightRadius: "10px",
+    borderTop: "3px solid dodgerblue",
+    fontWeight: "bold",
   },
   icon: {
     height: "30px",
@@ -167,13 +205,13 @@ const styles = {
     zIndex: -1,
   },
   link: {
-    width: "150px",
-    height: "150px",
+    width: "10em",
+    height: "10em",
     borderRadius: 18,
     textDecoration: "none",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 10
+    marginBottom: 10,
   },
 };

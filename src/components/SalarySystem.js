@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import laptop from "../PorfolioImages/laptop.png";
 
-export default class School extends Component {
+export default class SalarySystem extends Component {
   pageTransition = {
     in: {
       opacity: 1,
@@ -32,18 +32,15 @@ export default class School extends Component {
         transition={this.pageSettings}
         style={{ overflow: "auto" }}
       >
-        <h1>SCHOOL</h1>
+        <h1>Salary System</h1>
         <Link to="/code">Back</Link>
         <img src={laptop} alt="logo" style={styles.image} />
-        <p style={styles.text}>
-          Project using HTML and CSS. This is one of my oldest projects and it
-          is a simple page desing but fully responsive. This was the first page
-          where I implemented images, icons, videos and a fully mobile friendly
-          design.
-        </p>
-        <a href="">View Live website</a>
+        <p style={styles.text}>Salary system</p>
+        <a href="https://employeesalary.herokuapp.com/" target="_blank">
+          View Live website
+        </a>
         <br />
-        <a href="https://github.com/Abeldlp/MERN-APP" target="_blank">
+        <a href="" target="_blank">
           View source code
         </a>
       </motion.div>

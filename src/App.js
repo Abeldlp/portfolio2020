@@ -15,6 +15,8 @@ import Contact from "./components/Contact";
 import Fitness from "./components/Fitness";
 import Construction from "./components/Construction";
 import School from "./components/School";
+import SalarySystem from "./components/SalarySystem";
+
 //Mobile Components
 import SelfIntroMobile from "./components/mobile/SelfIntroMobile";
 
@@ -35,6 +37,7 @@ export default class App extends Component {
                   <Route path="/code/fitness" component={Fitness} />
                   <Route path="/code/construction" component={Construction} />
                   <Route path="/code/school" component={School} />
+                  <Route path="/code/salarysystem" component={SalarySystem} />
                   <Route path="/contact" component={Contact} />
                 </Switch>
               </AnimatePresence>

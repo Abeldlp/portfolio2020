@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../PorfolioImages/logo.png";
-import serMe from "../PorfolioImages/no-background-big-touched.png";
+//import serMe from "../PorfolioImages/no-background-big-touched.png";
+import { motion } from "framer-motion";
 
 export default class SelfIntro extends Component {
   render() {
     return (
-      <div className="self-part">
+      //Check if it is neccesary
+      <motion.div className="self-part">
         <img src={logo} style={styles.logo} alt="logo" />
         {/* IMAGE TO COVER FULL SCREEN <div className="self-portrait"></div>*/}
         {/*<img src={serMe} style={styles.selfMe} alt="logo" /> */}
@@ -14,7 +16,14 @@ export default class SelfIntro extends Component {
           <h1 style={styles.fontStyle1}>ABEL DLP</h1>
           <h1 style={styles.fontStyle2}>Web Developer</h1>
         </div>
-        <div className="navbar" style={styles.navbar}>
+        <motion.div
+          className="navbar"
+          style={styles.navbar}
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: "100%", opacity: 0 }}
+          transition={{ delay: 1 }}
+        >
           <Link to="/" id="nav-item">
             Me
           </Link>
@@ -27,8 +36,8 @@ export default class SelfIntro extends Component {
           <Link to="/contact" id="nav-item">
             Contact
           </Link>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     );
   }
 }
@@ -39,7 +48,7 @@ const styles = {
     height: 80,
     padding: 20,
     position: "relative",
-    top:"10%",
+    top: "10%",
     zIndex: 1,
   },
   selfMe: {
@@ -56,7 +65,6 @@ const styles = {
     letterSpacing: 5,
     position: "relative",
     fontFamily: "Montserrat",
-    
   },
   fontStyle2: {
     color: "white",

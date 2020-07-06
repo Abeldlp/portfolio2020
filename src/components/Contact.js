@@ -93,9 +93,13 @@ export default class Contact extends Component {
           variants={this.pageTransition}
           transition={this.pageSettings}
         >
-          <h1>Contact</h1>
-          <form style={styles.formstyle}>
-            <input
+          <h1 style={{ fontFamily: "Montserrat" }}>Contact</h1>
+          <motion.form style={styles.formstyle}>
+            <motion.input
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1 }}
               style={styles.formitem}
               type="text"
               placeholder="Name..."
@@ -103,7 +107,11 @@ export default class Contact extends Component {
               onChange={this.handleNameChange}
               required
             />
-            <input
+            <motion.input
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.1 }}
               style={styles.formitem}
               type="email"
               placeholder="Email..."
@@ -111,7 +119,11 @@ export default class Contact extends Component {
               onChange={this.handleEmailChange}
               required
             />
-            <input
+            <motion.input
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.2 }}
               style={styles.formitem}
               type="text"
               placeholder="Subject..."
@@ -119,7 +131,11 @@ export default class Contact extends Component {
               onChange={this.handleSubjectChange}
               required
             />
-            <textarea
+            <motion.textarea
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.3 }}
               cols="30"
               rows="10"
               placeholder="Drop me your message"
@@ -127,16 +143,34 @@ export default class Contact extends Component {
               value={this.state.message}
               onChange={this.handleMessageChange}
               required
-            ></textarea>
-            <input
+            ></motion.textarea>
+            <motion.input
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1.4 }}
               id="sendbutton"
               type="submit"
               value="Send"
               onClick={this.handleSubmit}
             />
-          </form>
-          <p>Or add me directly on wassap: +31 627 193 590</p>
-          <div style={styles.sns}>
+          </motion.form>
+          <motion.p
+            style={{ fontFamily: "Roboto" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 1.5 }}
+          >
+            Or add me directly on wassap: +31 627 193 590
+          </motion.p>
+          <motion.div
+            style={styles.sns}
+            initial={{ opacity: 0, width: "100%" }}
+            animate={{ opacity: 1, width: "50%" }}
+            exit={{ opacity: 0, width: "100%" }}
+            transition={{ delay: 1.5 }}
+          >
             <a
               href="https://www.facebook.com/kenny.delapaz"
               target="_blank"
@@ -165,7 +199,7 @@ export default class Contact extends Component {
             >
               <img src={githubicon} alt="logo" />
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       );
     } else if (this.state.sent) {
@@ -178,10 +212,17 @@ export default class Contact extends Component {
           variants={this.pageTransition}
           transition={this.pageSettings}
         >
-          <h1>Thank you!</h1>
-          <img src={sent_icon} style={styles.sent_icon} alt="logo" />
-          <h2>Your message has been sent</h2>
-          <h2>I will get back to you as soon as possible</h2>
+          <h1 style={{ fontFamily: "Roboto" }}>Thank you!</h1>
+          <img
+            style={{ fontFamily: "Roboto" }}
+            src={sent_icon}
+            style={styles.sent_icon}
+            alt="logo"
+          />
+          <h2 style={{ fontFamily: "Roboto" }}>Your message has been sent</h2>
+          <h2 style={{ fontFamily: "Roboto" }}>
+            I will get back to you as soon as possible
+          </h2>
         </motion.div>
       );
     }
@@ -202,6 +243,7 @@ const styles = {
     borderRadius: 18,
     border: "solid 1px dodgerblue",
     resize: "none",
+    fontFamily: "Roboto",
   },
   sendbutton: {
     padding: 10,
@@ -211,6 +253,7 @@ const styles = {
     backgroundColor: "dodgerblue",
     border: "none",
     cursor: "pointer",
+    fontFamily: "Montserrat",
   },
   sns: {
     width: "50%",
@@ -220,5 +263,8 @@ const styles = {
   },
   sent_icon: {
     height: "200px",
+  },
+  text: {
+    fontFamily: "Roboto",
   },
 };

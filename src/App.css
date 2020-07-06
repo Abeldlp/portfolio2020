@@ -22,7 +22,6 @@
 /*Intro part wont move will stay fixed*/
 .self-part {
   background-image: url(./PorfolioImages/sea.jpg);
-  background-image: url(./PorfolioImages/sea.jpg), linear-gradient(#eb01a5, #d13531);
   background-size: cover;
   background-position: center;
   width: 50%;
@@ -54,7 +53,6 @@
 
 .intro-text {
   position: relative;
-  
 }
 
 #nav-item {
