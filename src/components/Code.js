@@ -51,9 +51,9 @@ export default class Code extends Component {
           Fullstack, Frontend and Desings
         </p>
         <p style={{ width: "80%", paddingBottom: 10, fontFamily: "Roboto" }}>
-          There are pages within this code section that will be visible. There
-          are others that you will only be able to see the code pushed to
-          github.
+          Most of projects are deployed with Heroku. Heroku's server tends to be
+          slow, when you click on view live page, be patient while it loads.
+          Thank you.
         </p>
         <motion.div style={styles.main_container}>
           <Link to="/code/fitness" style={styles.link}>

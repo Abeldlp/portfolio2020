@@ -176,28 +176,44 @@ export default class Contact extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={facebookicon} alt="logo" />
+              <motion.img
+                src={facebookicon}
+                alt="logo"
+                whileHover={{ rotate: -10, scale: 1.1 }}
+              />
             </a>
             <a
               href="https://www.instagram.com/abeldlp193/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={instagramicon} alt="logo" />
+              <motion.img
+                src={instagramicon}
+                alt="logo"
+                whileHover={{ rotate: -10, scale: 1.1 }}
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/abel-de-la-paz-73b675187/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={linkedinicon} alt="logo" />
+              <motion.img
+                src={linkedinicon}
+                alt="logo"
+                whileHover={{ rotate: -10, scale: 1.1 }}
+              />
             </a>
             <a
               href="https://github.com/Abeldlp"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={githubicon} alt="logo" />
+              <motion.img
+                src={githubicon}
+                alt="logo"
+                whileHover={{ rotate: -10, scale: 1.1 }}
+              />
             </a>
           </motion.div>
         </motion.div>
@@ -213,12 +229,7 @@ export default class Contact extends Component {
           transition={this.pageSettings}
         >
           <h1 style={{ fontFamily: "Roboto" }}>Thank you!</h1>
-          <img
-            style={{ fontFamily: "Roboto" }}
-            src={sent_icon}
-            style={styles.sent_icon}
-            alt="logo"
-          />
+          <img src={sent_icon} style={styles.sent_icon} alt="logo" />
           <h2 style={{ fontFamily: "Roboto" }}>Your message has been sent</h2>
           <h2 style={{ fontFamily: "Roboto" }}>
             I will get back to you as soon as possible

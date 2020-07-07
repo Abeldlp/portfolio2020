@@ -36,11 +36,11 @@ export default class SalarySystem extends Component {
         <Link to="/code">Back</Link>
         <img src={laptop} alt="logo" style={styles.image} />
         <p style={styles.text}>Salary system</p>
-        <a href="https://employeesalary.herokuapp.com/" target="_blank">
+        <a href="https://employeesalary.herokuapp.com/" target="_blank" rel="noopener noreferrer">
           View Live website
         </a>
         <br />
-        <a href="" target="_blank">
+        <a href="/#" target="_blank">
           View source code
         </a>
       </motion.div>

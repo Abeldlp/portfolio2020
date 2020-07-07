@@ -1,85 +1,134 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default class SelfIntroMobile extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      navbar_hidden: true,
-      button: "Menu",
+      open: false,
     };
 
     this.openMenuBar = this.openMenuBar.bind(this);
   }
 
   openMenuBar() {
-    if (this.state.navbar_hidden) {
+    if (this.state.open) {
       this.setState({
-        navbar_hidden: false,
-        button: "Close",
+        open: false,
       });
-    } else if (!this.state.navbar_hidden) {
+    } else if (!this.state.false) {
       this.setState({
-        navbar_hidden: true,
-        button: "Menu",
+        open: true,
       });
     }
   }
 
   render() {
-    if (!this.state.navbar_hidden) {
-      return (
-        <div style={styles.navbar_container}>
-          <div style={styles.navbar}>
-            <Link to="/">Home</Link>
-            <Link to="/me">ME</Link>
-            <Link to="/about">About</Link>
-            <Link to="/Code">Code</Link>
-            <Link to="/conact">Contact</Link>
-          </div>
-          <div style={styles.navbar_button} onClick={this.openMenuBar}>
-            {this.state.button}
-          </div>
-        </div>
-      );
-    } else if (this.state.navbar_hidden) {
-      return (
-        <div className={styles.navbar_container}>
-          <div style={styles.navbar_button} onClick={this.openMenuBar}>
-            {this.state.button}
-          </div>
-        </div>
-      );
-    }
+    return (
+      <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          overflow: "hidden",
+          position: "fixed",
+        }}
+      >
+        <motion.div
+          onClick={this.openMenuBar}
+          style={styles.navbar_container}
+          variants={variants}
+          animate={this.state.open ? "open" : "closed"}
+          transition={{ duration: 0.2 }}
+        >
+          {/* 
+        <div style={styles.navbar}>
+          <Link to="/">Home</Link>
+          <Link to="/me">ME</Link>
+          <Link to="/about">About</Link>
+          <Link to="/Code">Code</Link>
+          <Link to="/conact">Contact</Link>
+        </div> */}
+        </motion.div>
+        <motion.div
+          style={styles.container2}
+          variants={variants2}
+          animate={this.state.open ? "open" : "closed"}
+          transition={{ duration: 0.2 }}
+        >
+          <Link onClick={this.openMenuBar} style={styles.link} to="/">
+            INTRO
+          </Link>
+          <Link onClick={this.openMenuBar} style={styles.link} to="/me">
+            ME
+          </Link>
+          <Link
+            onClick={this.openMenuBar}
+            style={styles.link}
+            to="/about/mobile"
+          >
+            ABOUT
+          </Link>
+          <Link onClick={this.openMenuBar} style={styles.link} to="/projects">
+            PROJECTS
+          </Link>
+          <Link onClick={this.openMenuBar} style={styles.link} to="/contact">
+            CONTACT
+          </Link>
+        </motion.div>
+      </div>
+    );
   }
 }
+
+const variants = {
+  open: { scale: 40, borderRadius: "100%", backgroundColor: "dodgerblue" },
+  closed: { scale: 1, borderRadius: "100%", backgroundColor: "dodgerblue" },
+};
+
+const variants2 = {
+  open: { opacity: 1, pointerEvents: "auto" },
+  closed: { opacity: 0, pointerEvents: "none" },
+};
 
 const styles = {
   navbar_container: {
     display: "flex",
-    height: "50vh",
-    width: "50%",
+    height: "50px",
+    width: "50px",
+    overflowX: "hidden",
     justifyContent: "space-around",
-    backgroundColor: "skyblue",
-    borderRadius: "0px 0px 18px 0px",
-    boxShadow: "0px 0px 27px 5px grey",
+    backgroundColor: "dodgerblue",
+    borderRadius: "100%",
+    position: "fixed",
+    zIndex: 1000,
+    top: "20px",
+    left: "20px",
+    outline: "none",
+  },
+  container2: {
+    position: "fixed",
+    zIndex: 1000,
+    textAlign: "center",
+    pointerEvents: "none",
+    display: "flex",
+    width: "100%",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItem: "center",
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+    fontFamily: "Montserrat",
+    padding: "20px",
+    cursor: "none",
   },
   navbar: {
     display: "flex",
     flexDirection: "column",
     height: "100%",
     justifyContent: "space-around",
-  },
-  navbar_button: {
-    height: 50,
-    width: 50,
-    backgroundColor: "dodgerblue",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: 20,
-    padding: 3,
-    borderRadius: "100%",
   },
 };

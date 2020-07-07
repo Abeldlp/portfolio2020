@@ -39,9 +39,9 @@ export default class Fitness extends Component {
           Fullstack application to keep log of your exercises and and set up
           daily exercises
         </p>
-        <a href="">View Live website</a>
+        <a href="/#">View Live website</a>
         <br />
-        <a href="">View source code</a>
+        <a href="/#">View source code</a>
       </motion.div>
     );
   }

@@ -62,18 +62,20 @@
   cursor: pointer;
   font-size: 18px;
   color: dodgerblue;
-  border-bottom: solid 2px rgba(255, 255, 255, 0);
+  /*border-bottom: solid 2px rgba(255, 255, 255, 0);*/
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 15px;
   padding: 5px;
-  transition: all ease-in-out 0.3s;
+  transition: all cubic-bezier(0.68, -0.80, 0.265, 1.55) 0.3s;
+  font-weight: bold;
 }
 
 #nav-item:hover {
-  border-bottom: solid 2px dodgerblue;
+  /*border-bottom: solid 2px dodgerblue;*/
+  transform: scale(1.05)
 }
 
 /*CONTACT FORM*/

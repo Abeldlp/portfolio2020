@@ -41,9 +41,13 @@ export default class School extends Component {
           where I implemented images, icons, videos and a fully mobile friendly
           design.
         </p>
-        <a href="">View Live website</a>
+        <a href="/#">View Live website</a>
         <br />
-        <a href="https://github.com/Abeldlp/MERN-APP" target="_blank">
+        <a
+          href="https://github.com/Abeldlp/MERN-APP"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           View source code
         </a>
       </motion.div>

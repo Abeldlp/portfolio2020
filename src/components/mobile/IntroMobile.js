@@ -1,14 +1,26 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import logo from "../PorfolioImages/logo.png";
+import logo from "../../PorfolioImages/logo.png";
 //import serMe from "../PorfolioImages/no-background-big-touched.png";
 import { motion } from "framer-motion";
+import Sea from "../../PorfolioImages/sea.jpg";
 
-export default class SelfIntro extends Component {
+export default class IntroMobile extends Component {
   render() {
     return (
       //Check if it is neccesary
-      <motion.div className="self-part">
+      <motion.div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          overflow: "hidden",
+          backgroundImage: "url(" + Sea + ")",
+          backgroundSize: "cover",
+          position: "relative",
+          zIndex: -1,
+        }}
+      >
         <motion.img
           src={logo}
           style={styles.logo}
@@ -16,7 +28,7 @@ export default class SelfIntro extends Component {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
-          transition={{delay: 1}}
+          transition={{ delay: 1 }}
         />
         {/* IMAGE TO COVER FULL SCREEN <div className="self-portrait"></div>*/}
         {/*<img src={serMe} style={styles.selfMe} alt="logo" /> */}
@@ -31,20 +43,7 @@ export default class SelfIntro extends Component {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: "100%", opacity: 0 }}
           transition={{ delay: 1 }}
-        >
-          <Link to="/" id="nav-item">
-            Me
-          </Link>
-          <Link to="/about" id="nav-item">
-            About
-          </Link>
-          <Link to="/code" id="nav-item">
-            Projects
-          </Link>
-          <Link to="/contact" id="nav-item">
-            Contact
-          </Link>
-        </motion.div>
+        ></motion.div>
       </motion.div>
     );
   }
@@ -58,14 +57,6 @@ const styles = {
     position: "relative",
     top: "10%",
     zIndex: 1,
-  },
-  selfMe: {
-    height: "40%",
-    position: "absolute",
-    borderRadius: "100%",
-    boxShadow: "inset 0px 0px 27px 5px #7dd3e4",
-    marginTop: "10%",
-    opacity: 0.95,
   },
   fontStyle1: {
     color: "white",

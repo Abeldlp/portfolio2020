@@ -2,30 +2,30 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 
 //IMAGES IMPORT HOLDER
-import html from "../PorfolioImages/html.png";
-import css from "../PorfolioImages/css.png";
-import javascript from "../PorfolioImages/javascript.png";
-import mongo from "../PorfolioImages/mongo.png";
-import node from "../PorfolioImages/node.png";
-import reactimage from "../PorfolioImages/react.png";
-import express from "../PorfolioImages/express.png";
+import html from "../../PorfolioImages/html.png";
+import css from "../../PorfolioImages/css.png";
+import javascript from "../../PorfolioImages/javascript.png";
+import mongo from "../../PorfolioImages/mongo.png";
+import node from "../../PorfolioImages/node.png";
+import reactimage from "../../PorfolioImages/react.png";
+import express from "../../PorfolioImages/express.png";
 
 //--------------------
 
-export default class Me extends Component {
+export default class MeMobile extends Component {
   pageTransition = {
     in: {
       opacity: 1,
-      x: 0,
+      y: 0,
     },
     out: {
       opacity: 0,
-      x: "-100%",
+      y: "-100%",
     },
   };
 
   pageSettings = {
-    duration: 1,
+    duration: 0.5,
     transition: {
       delayChildren: 0.5,
     },
@@ -34,7 +34,6 @@ export default class Me extends Component {
   render() {
     return (
       <motion.div
-        className="secondary-screen"
         exit="out"
         animate="in"
         initial="out"
@@ -44,6 +43,7 @@ export default class Me extends Component {
         <h1
           style={{
             fontFamily: "Montserrat",
+            textAlign: "center",
           }}
         >
           <span style={{ color: "dodgerblue", fontSize: "30px" }}>
@@ -58,7 +58,7 @@ export default class Me extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.5 }}
         >
           Path<span style={{ color: "dodgerblue", fontSize: "60px" }}>.</span>
         </motion.h3>
@@ -68,7 +68,7 @@ export default class Me extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1.1 }}
+          transition={{ delay: 0.6 }}
         >
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
@@ -95,7 +95,7 @@ export default class Me extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 0.7 }}
         >
           <span style={{ color: "dodgerblue" }}>-</span>Skills
           <span style={{ color: "dodgerblue" }}>-</span>
@@ -107,7 +107,7 @@ export default class Me extends Component {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            transition={{ delay: 1.3 }}
+            transition={{ delay: 0.8 }}
           >
             <h3 style={styles.p}>Frontend</h3>
             <div style={styles.image_container}>
@@ -124,7 +124,7 @@ export default class Me extends Component {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
-            transition={{ delay: 1.3 }}
+            transition={{ delay: 0.8 }}
           >
             <h3 style={styles.p}>Backend</h3>
             <div style={styles.image_container}>
@@ -147,21 +147,25 @@ export default class Me extends Component {
 
 const styles = {
   p: {
-    width: "60%",
+    paddingTop: "20px",
+    width: "80%",
     fontFamily: "Roboto",
-    textAlign:"left"
+    textAlign: "left",
+    margin: "auto",
   },
   p1: {
-    width: "60%",
+    width: "90%",
     fontFamily: "Roboto",
-    
+    textAlign: "center",
+    margin: "20px auto",
   },
   path: {
-    width: "60%",
+    width: "80%",
     fontFamily: "Montserrat",
     textAlign: "left",
     paddingLeft: "20px",
     borderBottom: "1.5px solid dodgerblue",
+    margin: "auto",
   },
   image_container: {
     padding: 10,
