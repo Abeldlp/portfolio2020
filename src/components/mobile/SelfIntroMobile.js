@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import menu_button from "../../icons/menu-button.png";
+import logo from "../../PorfolioImages/logo.png";
 
 export default class SelfIntroMobile extends Component {
   constructor(props) {
@@ -29,9 +31,6 @@ export default class SelfIntroMobile extends Component {
     return (
       <div
         style={{
-          height: "100vh",
-          width: "100vw",
-          overflow: "hidden",
           position: "fixed",
         }}
       >
@@ -39,9 +38,22 @@ export default class SelfIntroMobile extends Component {
           onClick={this.openMenuBar}
           style={styles.navbar_container}
           variants={variants}
+          initial={{ scale: 0 }}
           animate={this.state.open ? "open" : "closed"}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.1 }}
         >
+          <motion.img
+            src={menu_button}
+            alt="logo"
+            variants={variants3}
+            initial={{ scale: 1 }}
+            animate={this.state.open ? "open" : "closed"}
+            transition={{ duration: 0.1 }}
+            style={{
+              height: "30px",
+              width: "20px",
+            }}
+          />
           {/* 
         <div style={styles.navbar}>
           <Link to="/">Home</Link>
@@ -54,12 +66,15 @@ export default class SelfIntroMobile extends Component {
         <motion.div
           style={styles.container2}
           variants={variants2}
+          initial={{ opacity: 0 }}
           animate={this.state.open ? "open" : "closed"}
-          transition={{ duration: 0.2 }}
         >
-          <Link onClick={this.openMenuBar} style={styles.link} to="/">
-            INTRO
-          </Link>
+          <img
+            src={logo}
+            style={styles.logo}
+            alt="logo"
+            
+          />
           <Link onClick={this.openMenuBar} style={styles.link} to="/me">
             ME
           </Link>
@@ -91,25 +106,33 @@ const variants2 = {
   open: { opacity: 1, pointerEvents: "auto" },
   closed: { opacity: 0, pointerEvents: "none" },
 };
+const variants3 = {
+  open: { opacity: 0, trasition: { duration: 0 } },
+  closed: { opacity: 1, transition: { delay: 0.3 } },
+};
 
-const styles = {
+const styles = {logo: {
+  width: 80,
+  height: 80,
+  margin: "auto",
+  padding:"20px"
+  
+},
   navbar_container: {
     display: "flex",
     height: "50px",
     width: "50px",
-    overflowX: "hidden",
-    justifyContent: "space-around",
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: "dodgerblue",
     borderRadius: "100%",
     position: "fixed",
-    zIndex: 1000,
     top: "20px",
     left: "20px",
     outline: "none",
   },
   container2: {
     position: "fixed",
-    zIndex: 1000,
     textAlign: "center",
     pointerEvents: "none",
     display: "flex",

@@ -109,7 +109,7 @@ export default class MeMobile extends Component {
             exit={{ opacity: 0, x: -20 }}
             transition={{ delay: 0.8 }}
           >
-            <h3 style={styles.p}>Frontend</h3>
+            <h3 style={styles.p1}>Frontend</h3>
             <div style={styles.image_container}>
               <img style={styles.image} src={html} alt="logo" />
               <img style={styles.image} src={css} alt="logo" />
@@ -126,7 +126,7 @@ export default class MeMobile extends Component {
             exit={{ opacity: 0, x: 20 }}
             transition={{ delay: 0.8 }}
           >
-            <h3 style={styles.p}>Backend</h3>
+            <h3 style={styles.p1}>Backend</h3>
             <div style={styles.image_container}>
               <img style={styles.image} src={mongo} alt="logo" />
               <img style={styles.image} src={node} alt="logo" />

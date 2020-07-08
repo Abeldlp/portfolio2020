@@ -3,6 +3,7 @@ import logo from "../../PorfolioImages/logo.png";
 //import serMe from "../PorfolioImages/no-background-big-touched.png";
 import { motion } from "framer-motion";
 import Sea from "../../PorfolioImages/sea.jpg";
+import { Link } from "react-router-dom";
 
 export default class IntroMobile extends Component {
   render() {
@@ -12,44 +13,73 @@ export default class IntroMobile extends Component {
         style={{
           display: "flex",
           flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
           width: "100%",
+          height: "100vh",
           overflow: "hidden",
           backgroundImage: "url(" + Sea + ")",
           backgroundSize: "cover",
           position: "relative",
-          zIndex: -1,
         }}
       >
         <motion.img
           src={logo}
           style={styles.logo}
           alt="logo"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 1, scale: 0, y: 0 }}
+          animate={{ opacity: 1, scale: 1, y: -60 }}
+          exit={{ opacity: 1, scale: 0, y: 0 }}
           transition={{ delay: 1 }}
         />
         {/* IMAGE TO COVER FULL SCREEN <div className="self-portrait"></div>*/}
         {/*<img src={serMe} style={styles.selfMe} alt="logo" /> */}
-        <div className="intro-text">
-          <h1 style={styles.fontStyle1}>ABEL DLP</h1>
-          <h1 style={styles.fontStyle2}>Web Developer</h1>
-        </div>
-        <motion.div
-          className="navbar"
-          style={styles.navbar}
-          initial={{ y: "100%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: "100%", opacity: 0 }}
-          transition={{ delay: 1 }}
-        ></motion.div>
+        <motion.div className="intro-text">
+          <motion.h1
+            style={styles.fontStyle1}
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 20 }}
+            exit={{ opacity: 0, y: 0 }}
+            transition={{ delay: 1.4 }}
+          >
+            ABEL DLP
+          </motion.h1>
+          <motion.h1
+            style={styles.fontStyle2}
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 20 }}
+            exit={{ opacity: 0, y: 0 }}
+            transition={{ delay: 1.7 }}
+          >
+            Web Developer
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 20 }}
+            exit={{ opacity: 0, y: 0 }}
+            transition={{ delay: 1.9 }}
+          >
+            <Link to="/me" style={styles.link}>
+              <p style={styles.linktext}>Check out</p>
+            </Link>
+          </motion.div>
+        </motion.div>
       </motion.div>
     );
   }
 }
 
 const styles = {
+  link: {
+    textDecoration: "none",
+  },
+  linktext: {
+    color: "white",
+    padding: 10,
+    border: "1.5px solid white",
+    fontSize: 30,
+    textAlign:"center"
+  },
   logo: {
     width: 80,
     height: 80,
