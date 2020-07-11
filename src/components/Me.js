@@ -73,22 +73,22 @@ export default class Me extends Component {
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>{" "}
-          Fullstack web developer with an enphasys on responsive design.
+          Fullstack web developer with great emphasys on responsive design.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Able to maintain clean and reusable code troughout the project.
+          Clean and reusable code througout the project.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Following the less is more rule design.
+          Less is more, pixel-perfect.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Always willing to learn for new libraries for a project.
+          Open to learn new libraries for a project.
         </motion.p>
         <motion.h3
           style={styles.p1}

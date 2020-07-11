@@ -28,9 +28,9 @@ export default class IntroMobile extends Component {
           style={styles.logo}
           alt="logo"
           initial={{ opacity: 1, scale: 0, y: 0 }}
-          animate={{ opacity: 1, scale: 1, y: -60 }}
+          animate={{ opacity: 1, scale: 1, y: -10 }}
           exit={{ opacity: 1, scale: 0, y: 0 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.5 }}
         />
         {/* IMAGE TO COVER FULL SCREEN <div className="self-portrait"></div>*/}
         {/*<img src={serMe} style={styles.selfMe} alt="logo" /> */}
@@ -40,16 +40,17 @@ export default class IntroMobile extends Component {
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 20 }}
             exit={{ opacity: 0, y: 0 }}
-            transition={{ delay: 1.4 }}
+            transition={{ delay: 0.6 }}
           >
             ABEL DLP
           </motion.h1>
+          
           <motion.h1
             style={styles.fontStyle2}
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 20 }}
             exit={{ opacity: 0, y: 0 }}
-            transition={{ delay: 1.7 }}
+            transition={{ delay: 0.7 }}
           >
             Web Developer
           </motion.h1>
@@ -57,7 +58,7 @@ export default class IntroMobile extends Component {
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 20 }}
             exit={{ opacity: 0, y: 0 }}
-            transition={{ delay: 1.9 }}
+            transition={{ delay: 0.8 }}
           >
             <Link to="/me" style={styles.link}>
               <p style={styles.linktext}>Check out</p>
@@ -70,15 +71,14 @@ export default class IntroMobile extends Component {
 }
 
 const styles = {
-  link: {
-    textDecoration: "none",
-  },
+  
   linktext: {
     color: "white",
     padding: 10,
     border: "1.5px solid white",
     fontSize: 30,
-    textAlign:"center"
+    textAlign:"center",
+    borderRadius:10
   },
   logo: {
     width: 80,

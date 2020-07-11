@@ -2,23 +2,22 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import laptop from "../PorfolioImages/laptop.png";
+import laptop from "../PorfolioImages/FitnessPhoto.png";
 
 export default class Fitness extends Component {
   pageTransition = {
     in: {
       opacity: 1,
-      y: 0,
+      scale: 1,
     },
     out: {
       opacity: 0,
-      y: "-100%",
+      scale: 0,
     },
   };
 
   pageSettings = {
-    duration: 1,
-    transition: "linear",
+    duration: 0.5,
   };
 
   render() {
@@ -32,16 +31,73 @@ export default class Fitness extends Component {
         transition={this.pageSettings}
         style={{ overflow: "auto" }}
       >
-        <h1>FITNESS</h1>
-        <Link to="/code">Back</Link>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ delay: 0.7 }}
+        >
+          <Link to="/code" style={{ textDecoration: "none" }}>
+            <p
+              style={{
+                fontFamily: "Roboto",
+                color: "dodgerblue",
+                fontWeight: "bold",
+                letterSpacing: "1px",
+                padding: "10px",
+              }}
+            >
+              Back
+            </p>
+          </Link>
+        </motion.div>
         <img src={laptop} alt="logo" style={styles.image} />
-        <p>
+        <motion.h1
+          style={{ fontFamily: "Montserrat" }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ delay: 0.7 }}
+        >
+          Fitness Track
+        </motion.h1>
+        <motion.p
+          style={styles.text}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ delay: 0.8 }}
+        >
           Fullstack application to keep log of your exercises and and set up
-          daily exercises
-        </p>
-        <a href="/#">View Live website</a>
-        <br />
-        <a href="/#">View source code</a>
+          daily exercises DEPLOYED WITH HEROKU
+        </motion.p>
+        <motion.div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            width: "60%",
+          }}
+        >
+          <motion.a
+            href="https://fitnesstrackapp.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ delay: 0.9 }}
+            style={{
+              fontFamily: "Roboto",
+              color: "white",
+              textDecoration: "none",
+              backgroundColor: "dodgerblue",
+              padding: "10px",
+            }}
+          >
+            View Live website
+          </motion.a>
+        </motion.div>
       </motion.div>
     );
   }
@@ -50,5 +106,9 @@ export default class Fitness extends Component {
 const styles = {
   image: {
     width: "50%",
+  },
+  text: {
+    paddingLeft: "10%",
+    paddingRight: "10%",
   },
 };

@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import laptop from "../PorfolioImages/ConstructionPhoto.png";
+import laptop from "../PorfolioImages/FerrariPhoto.png";
 
-export default class Construction extends Component {
+export default class LaFerrari extends Component {
   pageTransition = {
     in: {
       opacity: 1,
@@ -59,7 +59,7 @@ export default class Construction extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.7 }}
         >
-          Construction FJD
+          La Ferrari
         </motion.h1>
         <motion.p
           style={styles.text}
@@ -68,9 +68,8 @@ export default class Construction extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.8 }}
         >
-          Local business website. Frontend React, backend Node.js Nodemailer framework.
-          Easy looking but strong design.
-          DEPLOYED WITH HEROKU
+          Simple, yet powerful design to show the La Ferrari's latest model.
+          Fully responsive landing page.
         </motion.p>
         <motion.div
           style={{
@@ -81,7 +80,7 @@ export default class Construction extends Component {
           }}
         >
           <motion.a
-            href="https://constructionfjd.herokuapp.com/"
+            href="https://abeldlp.github.io/ferraridesign/"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, x: -20 }}
@@ -98,7 +97,6 @@ export default class Construction extends Component {
           >
             View Live website
           </motion.a>
-
         </motion.div>
       </motion.div>
     );

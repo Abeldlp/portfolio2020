@@ -73,23 +73,6 @@ export default class Code extends Component {
               </span>
             </motion.div>
           </Link>
-          <Link to="/code/school" style={styles.link}>
-            <motion.div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.1 }}
-            >
-              SCHOOL WEBSITE
-              <br />
-              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
-                Frontend
-              </span>
-            </motion.div>
-          </Link>
           <Link to="/code/construction" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
@@ -98,7 +81,7 @@ export default class Code extends Component {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.2 }}
+              transition={{ delay: 1.1 }}
             >
               CONSTRUCTION
               <br />
@@ -115,16 +98,36 @@ export default class Code extends Component {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1 }}
+              transition={{ delay: 1.2 }}
             >
-              SALARY MANAGER
+              SALARY
+              <br />
+              MANAGER
               <br />
               <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
                 Fullstack
               </span>
             </motion.div>
           </Link>
-          <Link to="/code/last" style={styles.link}>
+          <Link to="/code/school" style={styles.link}>
+            <motion.div
+              style={styles.secondary_container}
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHoverOut}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ delay: 1 }}
+            >
+              SCHOOL <br /> WEBSITE
+              <br />
+              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
+                Frontend
+              </span>
+            </motion.div>
+          </Link>
+
+          <Link to="/code/laferrari" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
               onMouseEnter={this.handleHover}
@@ -141,23 +144,6 @@ export default class Code extends Component {
               </span>
             </motion.div>
           </Link>
-          <Link to="/code/tri" style={styles.link}>
-            <motion.div
-              style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.2 }}
-            >
-              TRIGERED
-              <br />
-              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
-                Frontend
-              </span>
-            </motion.div>
-          </Link>
         </motion.div>
       </motion.div>
     );
@@ -167,13 +153,14 @@ export default class Code extends Component {
 const styles = {
   main_container: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
     alingItems: "center",
     height: "100%",
     width: "80%",
     flexWrap: "wrap",
   },
   secondary_container: {
+    margin: "10px",
     width: "100%",
     height: "100%",
     display: "flex",
@@ -181,7 +168,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
-    transition: "all ease-in-out 0.2s",
+    transition: "all ease-in-out 0.1s",
     boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.5)",
     background: "white",
     color: "black",

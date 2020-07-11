@@ -57,9 +57,8 @@ export default class About extends Component {
           >
             <strong>Abel de la Paz (AbelDLP)</strong>
             <br />
-            <br /> I was born in Spain and raised in Tokyo. This gave me the
-            oportunity to think outside the box, since I have never been in a
-            box.
+            <br /> I was born in Spain, and grew up in Tokyo. This cultural mix made me
+          the person I am today.
           </motion.p>
         </motion.div>
 
@@ -107,7 +106,7 @@ export default class About extends Component {
         >
           <img src={snowboard} style={styles.snowboard} alt="logo" />
           <p style={styles.p}>
-            Besides working, I like to stay active. The best way for me to stay
+            The best way for me to stay
             active is Snowbarding. Luckily I had the chance to spend 4 years of
             my life as a profesional snowboarder in Japan. This photo was taken
             in Japan, Hakuba ski resort. <br />

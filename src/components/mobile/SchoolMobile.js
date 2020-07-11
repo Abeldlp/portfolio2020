@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import laptop from "../PorfolioImages/ConstructionPhoto.png";
+import laptop from "../../PorfolioImages/SchoolPhoto.png";
 
-export default class Construction extends Component {
+export default class FitnessMobile extends Component {
   pageTransition = {
     in: {
       opacity: 1,
-      scale: 1,
+      //scale: 1,
+      y: 0,
     },
     out: {
       opacity: 0,
-      scale: 0,
+      //scale: 0,
+      y: "100%",
     },
   };
 
@@ -23,13 +25,18 @@ export default class Construction extends Component {
   render() {
     return (
       <motion.div
-        className="secondary-screen"
         exit="out"
         animate="in"
         initial="out"
         variants={this.pageTransition}
         transition={this.pageSettings}
-        style={{ overflow: "auto" }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          //justifyContent: "space-between",
+          width: "100%",
+        }}
       >
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -37,7 +44,7 @@ export default class Construction extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.7 }}
         >
-          <Link to="/code" style={{ textDecoration: "none" }}>
+          <Link to="/projects" style={{ textDecoration: "none" }}>
             <p
               style={{
                 fontFamily: "Roboto",
@@ -59,7 +66,7 @@ export default class Construction extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.7 }}
         >
-          Construction FJD
+          Colmar Academy
         </motion.h1>
         <motion.p
           style={styles.text}
@@ -68,9 +75,8 @@ export default class Construction extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.8 }}
         >
-          Local business website. Frontend React, backend Node.js Nodemailer framework.
-          Easy looking but strong design.
-          DEPLOYED WITH HEROKU
+          School landing page design, using HTML and CSS. One of my first
+          projects, ever deployed. DEPLOYED WITH GITHUB PAGES
         </motion.p>
         <motion.div
           style={{
@@ -81,7 +87,7 @@ export default class Construction extends Component {
           }}
         >
           <motion.a
-            href="https://constructionfjd.herokuapp.com/"
+            href="https://abeldlp.github.io/schoolwebsite/"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, x: -20 }}
@@ -98,7 +104,6 @@ export default class Construction extends Component {
           >
             View Live website
           </motion.a>
-
         </motion.div>
       </motion.div>
     );
@@ -107,7 +112,8 @@ export default class Construction extends Component {
 
 const styles = {
   image: {
-    width: "50%",
+    width: "80%",
+    paddingTop: "20%",
   },
   text: {
     paddingLeft: "10%",

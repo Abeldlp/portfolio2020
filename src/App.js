@@ -19,14 +19,20 @@ import Fitness from "./components/Fitness";
 import Construction from "./components/Construction";
 import School from "./components/School";
 import SalarySystem from "./components/SalarySystem";
+import LaFerrari from "./components/LaFerrari";
 
 //Mobile Components
 import SelfIntroMobile from "./components/mobile/SelfIntroMobile";
 import IntroMobile from "./components/mobile/IntroMobile";
 import MeMobile from "./components/mobile/MeMobile";
 import AboutMobile from "./components/mobile/AboutMobile";
-import ContactMobile from "./components/mobile/ContactMobile"
-import CodeMobile from "./components/mobile/CodeMobile"
+import ContactMobile from "./components/mobile/ContactMobile";
+import CodeMobile from "./components/mobile/CodeMobile";
+import FitnessMobile from "./components/mobile/FitnessMobile";
+import SchoolMobile from "./components/mobile/SchoolMobile";
+import ConstructionMobile from "./components/mobile/ConstructionMobile";
+import SalaryManagerMobile from "./components/mobile/SalaryManagerMobile";
+import LaFerrariMobile from "./components/mobile/LaFerrariMobile";
 
 export default class App extends Component {
   render() {
@@ -46,6 +52,7 @@ export default class App extends Component {
                   <Route path="/code/construction" component={Construction} />
                   <Route path="/code/school" component={School} />
                   <Route path="/code/salarysystem" component={SalarySystem} />
+                  <Route path="/code/laferrari" component={LaFerrari} />
                   <Route path="/contact" component={Contact} />
                 </Switch>
               </AnimatePresence>
@@ -80,7 +87,24 @@ export default class App extends Component {
                   <Route path="/me" component={MeMobile} />
                   <Route path="/about/mobile" component={AboutMobile} />
                   <Route path="/contact" component={ContactMobile} />
-                  <Route path="/projects" component={CodeMobile} />
+                  <Route path="/projects" exact component={CodeMobile} />
+                  <Route
+                    path="/projects/fitnessapp"
+                    component={FitnessMobile}
+                  />
+                  <Route path="/projects/school" component={SchoolMobile} />
+                  <Route
+                    path="/projects/constructionfjd"
+                    component={ConstructionMobile}
+                  />
+                  <Route
+                    path="/projects/salarymanager"
+                    component={SalaryManagerMobile}
+                  />
+                  <Route
+                    path="/projects/laferrari"
+                    component={LaFerrariMobile}
+                  />
                 </Switch>
               </AnimatePresence>
             </Router>

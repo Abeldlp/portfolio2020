@@ -73,25 +73,24 @@ export default class MeMobile extends Component {
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>{" "}
-          Fullstack web developer with an enphasys on responsive design.
+          Fullstack web developer with great emphasys on responsive design.          <br />
+          <span style={{ color: "dodgerblue" }}>
+            <strong>-</strong>
+          </span>
+          Clean and reusable code througout the project.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Able to maintain clean and reusable code troughout the project.
+          Less is more, pixel-perfect.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Following the less is more rule design.
-          <br />
-          <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
-          </span>
-          Always willing to learn for new libraries for a project.
+          Open to learn new libraries for a project.
         </motion.p>
         <motion.h3
-          style={styles.p1}
+          style={styles.pskill}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
@@ -103,7 +102,7 @@ export default class MeMobile extends Component {
         <div style={styles.image_container_master}>
           {/*FRONTEND SECTION*/}
           <motion.div
-            style={styles.frontbackcontainer}
+            style={styles.frontcontainer}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
@@ -120,7 +119,7 @@ export default class MeMobile extends Component {
 
           {/*BACKEND SECTION*/}
           <motion.div
-            style={styles.frontbackcontainer}
+            style={styles.backcontainer}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
@@ -157,7 +156,13 @@ const styles = {
     width: "90%",
     fontFamily: "Roboto",
     textAlign: "center",
-    margin: "20px auto",
+    margin: "10px auto",
+  },
+  pskill: {
+    width: "90%",
+    fontFamily: "Roboto",
+    textAlign: "center",
+    margin: "15px auto",
   },
   path: {
     width: "80%",
@@ -186,7 +191,7 @@ const styles = {
     justifyContent: "space-around",
     flexWrap: "wrap",
   },
-  frontbackcontainer: {
+  frontcontainer: {
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
@@ -195,6 +200,19 @@ const styles = {
     backgroundColor: "white",
     padding: "20px",
     borderTop: "1.5px solid dodgerblue",
+    borderRight: "1.5px solid dodgerblue",
+    //backgroundColor:"rgba(30, 143, 255, 0.2)"
+  },
+  backcontainer: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    padding: "20px",
+    borderTop: "1.5px solid dodgerblue",
+    borderLeft: "1.5px solid dodgerblue"
     //backgroundColor:"rgba(30, 143, 255, 0.2)"
   },
 };

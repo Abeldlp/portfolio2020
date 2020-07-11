@@ -2,23 +2,22 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import laptop from "../PorfolioImages/laptop.png";
+import laptop from "../PorfolioImages/SchoolPhoto.png";
 
 export default class School extends Component {
   pageTransition = {
     in: {
       opacity: 1,
-      y: 0,
+      scale: 1,
     },
     out: {
       opacity: 0,
-      y: "-100%",
+      scale: 0,
     },
   };
 
   pageSettings = {
-    duration: 1,
-    transition: "linear",
+    duration: 0.5,
   };
 
   render() {
@@ -32,24 +31,73 @@ export default class School extends Component {
         transition={this.pageSettings}
         style={{ overflow: "auto" }}
       >
-        <h1>SCHOOL</h1>
-        <Link to="/code">Back</Link>
-        <img src={laptop} alt="logo" style={styles.image} />
-        <p style={styles.text}>
-          Project using HTML and CSS. This is one of my oldest projects and it
-          is a simple page desing but fully responsive. This was the first page
-          where I implemented images, icons, videos and a fully mobile friendly
-          design.
-        </p>
-        <a href="/#">View Live website</a>
-        <br />
-        <a
-          href="https://github.com/Abeldlp/MERN-APP"
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ delay: 0.7 }}
         >
-          View source code
-        </a>
+          <Link to="/code" style={{ textDecoration: "none" }}>
+            <p
+              style={{
+                fontFamily: "Roboto",
+                color: "dodgerblue",
+                fontWeight: "bold",
+                letterSpacing: "1px",
+                padding: "10px",
+              }}
+            >
+              Back
+            </p>
+          </Link>
+        </motion.div>
+        <img src={laptop} alt="logo" style={styles.image} />
+        <motion.h1
+          style={{ fontFamily: "Montserrat" }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ delay: 0.7 }}
+        >
+          Colmar Academy
+        </motion.h1>
+        <motion.p
+          style={styles.text}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ delay: 0.8 }}
+        >
+          School landing page design, using HTML and CSS. One of my first
+          projects, ever deployed. DEPLOYED WITH GITHUB PAGES
+        </motion.p>
+        <motion.div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            width: "60%",
+          }}
+        >
+          <motion.a
+            href="https://abeldlp.github.io/schoolwebsite/"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ delay: 0.9 }}
+            style={{
+              fontFamily: "Roboto",
+              color: "white",
+              textDecoration: "none",
+              backgroundColor: "dodgerblue",
+              padding: "10px",
+            }}
+          >
+            View Live website
+          </motion.a>
+        </motion.div>
       </motion.div>
     );
   }

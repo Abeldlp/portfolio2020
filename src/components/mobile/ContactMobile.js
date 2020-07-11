@@ -4,7 +4,7 @@ import facebookicon from "../../icons/facebook.png";
 import githubicon from "../../icons/github.png";
 import linkedinicon from "../../icons/linkedin.png";
 import instagramicon from "../../icons/instagram.png";
-import sent_icon from "../../PorfolioImages/sent_icon.png";
+//import sent_icon from "../../PorfolioImages/sent_icon.png";
 import axios from "axios";
 
 export default class ContactMobile extends Component {
@@ -224,28 +224,29 @@ export default class ContactMobile extends Component {
         </motion.div>
       </motion.div>
     );
-
-    {
-      /*return (
-        <motion.div
-          className="secondary-screen"
-          exit="out"
-          animate="in"
-          initial="out"
-          variants={this.pageTransition}
-          transition={this.pageSettings}
-        >
-          <h1 style={{ fontFamily: "Roboto" }}>Thank you!</h1>
-          <img src={sent_icon} style={styles.sent_icon} alt="logo" />
-          <h2 style={{ fontFamily: "Roboto" }}>Your message has been sent</h2>
-          <h2 style={{ fontFamily: "Roboto" }}>
-            I will get back to you as soon as possible
-          </h2>
-        </motion.div>
-      ); }*/
-    }
   }
 }
+
+
+  /*
+  TO SEND THANK YOU MESSAGE WHEN CONTACTED
+  return (
+    <motion.div
+      className="secondary-screen"
+      exit="out"
+      animate="in"
+      initial="out"
+      variants={this.pageTransition}
+      transition={this.pageSettings}
+    >
+      <h1 style={{ fontFamily: "Roboto" }}>Thank you!</h1>
+      <img src={sent_icon} style={styles.sent_icon} alt="logo" />
+      <h2 style={{ fontFamily: "Roboto" }}>Your message has been sent</h2>
+      <h2 style={{ fontFamily: "Roboto" }}>
+        I will get back to you as soon as possible
+      </h2>
+    </motion.div>
+  ); }*/
 
 const styles = {
   formstyle: {
@@ -262,7 +263,7 @@ const styles = {
     borderRadius: 18,
     border: "solid 1px dodgerblue",
     resize: "none",
-    fontFamily: "Roboto",
+    fontFamily: "Montserrat",
   },
   sendbutton: {
     padding: 10,

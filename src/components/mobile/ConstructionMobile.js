@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import laptop from "../PorfolioImages/ConstructionPhoto.png";
+import laptop from "../../PorfolioImages/ConstructionPhoto.png";
 
-export default class Construction extends Component {
+export default class ConstructionMobile extends Component {
   pageTransition = {
     in: {
       opacity: 1,
-      scale: 1,
+      //scale: 1,
+      y : 0
     },
     out: {
       opacity: 0,
-      scale: 0,
+      //scale: 0,
+      y: "100%"
     },
   };
 
@@ -23,13 +25,18 @@ export default class Construction extends Component {
   render() {
     return (
       <motion.div
-        className="secondary-screen"
         exit="out"
         animate="in"
         initial="out"
         variants={this.pageTransition}
         transition={this.pageSettings}
-        style={{ overflow: "auto" }}
+        style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            //justifyContent: "space-between",
+            width: "100%",
+          }}
       >
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -37,7 +44,7 @@ export default class Construction extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.7 }}
         >
-          <Link to="/code" style={{ textDecoration: "none" }}>
+          <Link to="/projects" style={{ textDecoration: "none" }}>
             <p
               style={{
                 fontFamily: "Roboto",
@@ -98,7 +105,6 @@ export default class Construction extends Component {
           >
             View Live website
           </motion.a>
-
         </motion.div>
       </motion.div>
     );
@@ -107,7 +113,8 @@ export default class Construction extends Component {
 
 const styles = {
   image: {
-    width: "50%",
+    width: "80%",
+    paddingTop:"20%"
   },
   text: {
     paddingLeft: "10%",

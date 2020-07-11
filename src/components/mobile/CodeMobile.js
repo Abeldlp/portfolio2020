@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
+import { Accordion } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
 
 export default class CodeMobile extends Component {
@@ -67,7 +69,7 @@ export default class CodeMobile extends Component {
           Thank you.
         </p>
         <motion.div style={styles.main_container}>
-          <div style={styles.link}>
+        <Link to="/projects/salarymanager" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
               initial={{ opacity: 0, y: -10 }}
@@ -75,21 +77,14 @@ export default class CodeMobile extends Component {
               exit={{ opacity: 0, y: -10 }}
               transition={{ delay: 0.6 }}
             >
-              FITNESS APP
+              SALARY MANAGER
               <br />
               <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
                 Fullstack
               </span>
             </motion.div>
-          </div>
-          <div style={{ display: "auto" }}>
-            <p style={{ display: "none" }}>
-              Fullstack application to keep track of your exercises routine. You
-              can create, update, delete and get all the data from the database.
-              Try it out!
-            </p>
-          </div>
-          <div style={styles.link}>
+          </Link>
+          <Link to="/projects/constructionfjd" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
               initial={{ opacity: 0, y: -10 }}
@@ -97,14 +92,14 @@ export default class CodeMobile extends Component {
               exit={{ opacity: 0, y: -10 }}
               transition={{ delay: 0.7 }}
             >
-              SCHOOL WEBSITE
+              CONSTRUCTION
               <br />
               <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
                 Frontend
               </span>
             </motion.div>
-          </div>
-          <div style={styles.link}>
+          </Link>
+          <Link to="/projects/fitnessapp" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
               initial={{ opacity: 0, y: -10 }}
@@ -112,14 +107,24 @@ export default class CodeMobile extends Component {
               exit={{ opacity: 0, y: -10 }}
               transition={{ delay: 0.8 }}
             >
-              CONSTRUCTION
+              FITNESS APP
               <br />
               <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
-                Frontend
+                Fullstack
               </span>
             </motion.div>
-          </div>
-          <div style={styles.link}>
+          </Link>
+          {/*TRYING TO MAKE THIS TEXT DISSAPEAR
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+          >
+            This is the text and I need to see if I can make this dissapear
+          </motion.div>
+          */}
+
+          <Link to="/projects/school" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
               initial={{ opacity: 0, y: -10 }}
@@ -127,14 +132,16 @@ export default class CodeMobile extends Component {
               exit={{ opacity: 0, y: -10 }}
               transition={{ delay: 0.9 }}
             >
-              SALARY MANAGER
+              SCHOOL WEBSITE
               <br />
               <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
-                Fullstack
+                Frontend
               </span>
             </motion.div>
-          </div>
-          <div style={styles.link}>
+          </Link>
+          
+          
+          <Link to="/projects/laferrari" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
               initial={{ opacity: 0, y: -10 }}
@@ -148,23 +155,10 @@ export default class CodeMobile extends Component {
                 Design
               </span>
             </motion.div>
-          </div>
-          <div style={styles.link}>
-            <motion.div
-              style={styles.secondary_container}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.1 }}
-            >
-              TRIGERED
-              <br />
-              <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
-                Frontend
-              </span>
-            </motion.div>
-          </div>
+          </Link>
+          
         </motion.div>
+        <Accordion />
       </motion.div>
     );
   }
