@@ -73,11 +73,12 @@ export default class MeMobile extends Component {
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>{" "}
-          Fullstack web developer with great emphasys on responsive design.          <br />
+          Fullstack web developer with great emphasis on responsive design.{" "}
+          <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Clean and reusable code througout the project.
+          Clean and reusable code throughout the project.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
@@ -212,7 +213,7 @@ const styles = {
     backgroundColor: "white",
     padding: "20px",
     borderTop: "1.5px solid dodgerblue",
-    borderLeft: "1.5px solid dodgerblue"
+    borderLeft: "1.5px solid dodgerblue",
     //backgroundColor:"rgba(30, 143, 255, 0.2)"
   },
 };

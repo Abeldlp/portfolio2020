@@ -73,12 +73,12 @@ export default class Me extends Component {
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>{" "}
-          Fullstack web developer with great emphasys on responsive design.
+          Fullstack web developer with great emphasis on responsive design.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Clean and reusable code througout the project.
+          Clean and reusable code throughout the project.
           <br />
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
@@ -88,7 +88,7 @@ export default class Me extends Component {
           <span style={{ color: "dodgerblue" }}>
             <strong>-</strong>
           </span>
-          Open to learn new libraries for a project.
+          Opened to learn new libraries for a project.
         </motion.p>
         <motion.h3
           style={styles.p1}
@@ -149,12 +149,11 @@ const styles = {
   p: {
     width: "60%",
     fontFamily: "Roboto",
-    textAlign:"left"
+    textAlign: "left",
   },
   p1: {
     width: "60%",
     fontFamily: "Roboto",
-    
   },
   path: {
     width: "60%",
