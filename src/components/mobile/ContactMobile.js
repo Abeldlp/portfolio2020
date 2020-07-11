@@ -17,14 +17,15 @@ export default class ContactMobile extends Component {
       message: "",
       sent: false,
     };
-
+    /*
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleSubjectChange = this.handleSubjectChange.bind(this);
     this.handleMessageChange = this.handleMessageChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);*/
   }
   //Change input handlers
+  /*
   handleNameChange(e) {
     this.setState({
       name: e.target.value,
@@ -64,7 +65,7 @@ export default class ContactMobile extends Component {
       subject: this.state.subject,
       message: this.state.message,
     });
-  }
+  }*/
 
   pageTransition = {
     in: {
@@ -100,7 +101,12 @@ export default class ContactMobile extends Component {
         }}
       >
         <h1 style={{ fontFamily: "Montserrat" }}>Contact</h1>
-        <motion.form style={styles.formstyle}>
+        <motion.form
+          style={styles.formstyle}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
           <motion.input
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -108,9 +114,10 @@ export default class ContactMobile extends Component {
             transition={{ delay: 0.6 }}
             style={styles.formitem}
             type="text"
+            name="name"
             placeholder="Name..."
-            value={this.state.name}
-            onChange={this.handleNameChange}
+            /*value={this.state.name}
+              onChange={this.handleNameChange}*/
             required
           />
           <motion.input
@@ -120,9 +127,10 @@ export default class ContactMobile extends Component {
             transition={{ delay: 0.7 }}
             style={styles.formitem}
             type="email"
+            name="email"
             placeholder="Email..."
-            value={this.state.email}
-            onChange={this.handleEmailChange}
+            /*value={this.state.email}
+              onChange={this.handleEmailChange}*/
             required
           />
           <motion.input
@@ -132,9 +140,10 @@ export default class ContactMobile extends Component {
             transition={{ delay: 0.8 }}
             style={styles.formitem}
             type="text"
+            name="subject"
             placeholder="Subject..."
-            value={this.state.subject}
-            onChange={this.handleSubjectChange}
+            /*value={this.state.subject}
+            onChange={this.handleSubjectChange}*/
             required
           />
           <motion.textarea
@@ -146,8 +155,10 @@ export default class ContactMobile extends Component {
             rows="10"
             placeholder="Drop me your message"
             style={styles.formitem}
-            value={this.state.message}
-            onChange={this.handleMessageChange}
+            style={styles.formitem}
+            /*value={this.state.message}
+              onChange={this.handleMessageChange}*/
+            name="message"
             required
           ></motion.textarea>
           <motion.input
@@ -158,7 +169,7 @@ export default class ContactMobile extends Component {
             id="sendbutton"
             type="submit"
             value="Send"
-            onClick={this.handleSubmit}
+            /*onClick={this.handleSubmit}*/
           />
         </motion.form>
         <motion.p
@@ -227,8 +238,7 @@ export default class ContactMobile extends Component {
   }
 }
 
-
-  /*
+/*
   TO SEND THANK YOU MESSAGE WHEN CONTACTED
   return (
     <motion.div
