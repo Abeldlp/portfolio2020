@@ -49,6 +49,7 @@ export default class MeMobile extends Component {
           <span style={{ color: "dodgerblue", fontSize: "30px" }}>
             Fullstack
           </span>
+          <br />
           Web Developer
           <span style={{ color: "dodgerblue", fontSize: "40px" }}>-</span>
         </h1>
