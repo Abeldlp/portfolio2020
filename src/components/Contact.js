@@ -95,12 +95,8 @@ export default class Contact extends Component {
           transition={this.pageSettings}
         >
           <h1 style={{ fontFamily: "Montserrat" }}>Contact</h1>
-          <motion.form
-            style={styles.formstyle}
-            name="contact"
-            method="POST"
-            data-netlify="true"
-          >
+          <motion.form style={styles.formstyle} name="contact" method="post">
+            <input type="hidden" name="form-name" value="contact" />
             <motion.input
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
