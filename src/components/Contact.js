@@ -5,7 +5,7 @@ import githubicon from "../icons/github.png";
 import linkedinicon from "../icons/linkedin.png";
 import instagramicon from "../icons/instagram.png";
 import sent_icon from "../PorfolioImages/sent_icon.png";
-import axios from "axios";
+//import axios from "axios";
 
 export default class Contact extends Component {
   constructor(props) {

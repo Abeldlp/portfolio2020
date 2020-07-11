@@ -155,7 +155,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alingItems: "center",
-    height: "100%",
+    maxHeight: "100%",
     width: "80%",
     flexWrap: "wrap",
   },

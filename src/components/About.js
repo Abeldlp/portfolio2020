@@ -57,8 +57,8 @@ export default class About extends Component {
           >
             <strong>Abel de la Paz (AbelDLP)</strong>
             <br />
-            <br /> I was born in Spain, and grew up in Tokyo. This cultural mix made me
-          the person I am today.
+            <br /> I was born in Spain, and grew up in Tokyo. This cultural mix
+            made me the person I am today.
           </motion.p>
         </motion.div>
 
@@ -106,10 +106,9 @@ export default class About extends Component {
         >
           <img src={snowboard} style={styles.snowboard} alt="logo" />
           <p style={styles.p}>
-            The best way for me to stay
-            active is Snowbarding. Luckily I had the chance to spend 4 years of
-            my life as a profesional snowboarder in Japan. This photo was taken
-            in Japan, Hakuba ski resort. <br />
+            The best way for me to stay active is Snowbarding. Luckily I had the
+            chance to spend 4 years of my life as a profesional snowboarder in
+            Japan. This photo was taken in Japan, Hakuba ski resort. <br />
             長野県白馬47スキー場
           </p>
         </motion.div>
@@ -159,11 +158,13 @@ const styles = {
     borderBottom: "1.5px solid dodgerblue",
   },
   computer: {
-    height: "40%",
+    maxHeight:"40%",
+    maxWidth:"20%",
     borderRadius: 10,
   },
   snowboard: {
-    height: "60%",
+    maxHeight: "60%",
+    maxWidth:"100%",
     borderRadius: "5px",
     boxShadow: "0px 5px 10px 2px lightgrey",
   },
@@ -174,11 +175,14 @@ const styles = {
     textAlign: "left",
   },
   languages: {
-    height: "70%",
+    maxHeight:"60%",
+    maxWidth: "20%",
     opacity: 0.8,
   },
   serMe: {
-    height: "100%",
+    
+    maxHeight:"100%",
+    maxWidth:"30%",
     borderRadius: "100%",
     boxShadow: "0px 5px 10px 2px lightgrey",
   },

@@ -177,7 +177,7 @@ const styles = {
   },
   image_container_master: {
     width: "80%",
-    margin: "auto",
+    margin: "20px auto",
     display: "flex",
     justifyContent: "space-around",
     flexWrap: "wrap",

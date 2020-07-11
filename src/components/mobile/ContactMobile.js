@@ -5,7 +5,7 @@ import githubicon from "../../icons/github.png";
 import linkedinicon from "../../icons/linkedin.png";
 import instagramicon from "../../icons/instagram.png";
 //import sent_icon from "../../PorfolioImages/sent_icon.png";
-import axios from "axios";
+//import axios from "axios";
 
 export default class ContactMobile extends Component {
   constructor(props) {
@@ -150,7 +150,6 @@ export default class ContactMobile extends Component {
             cols="30"
             rows="10"
             placeholder="Drop me your message"
-            style={styles.formitem}
             style={styles.formitem}
             /*value={this.state.message}
               onChange={this.handleMessageChange}*/
