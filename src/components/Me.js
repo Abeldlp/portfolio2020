@@ -9,6 +9,11 @@ import mongo from "../PorfolioImages/mongo.png";
 import node from "../PorfolioImages/node.png";
 import reactimage from "../PorfolioImages/react.png";
 import express from "../PorfolioImages/express.png";
+import figma from "../PorfolioImages/figmalogo.png";
+import heroku from "../PorfolioImages/herokulogo.png";
+import netlify from "../PorfolioImages/netlifylogo.png";
+import procreate from "../PorfolioImages/procreatelogo.png";
+import githubicon from "../icons/github.png";
 
 //--------------------
 
@@ -134,6 +139,23 @@ export default class Me extends Component {
             </div>
           </motion.div>
         </div>
+        {/*TOOLS SECTION*/}
+        <motion.div
+          style={styles.frontbackcontainer}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 20 }}
+          transition={{ delay: 1.3 }}
+        >
+          <h3 style={{ textAlign: "center", fontFamily: "Roboto" }}>Tools</h3>
+          <div style={styles.image_container}>
+            <img style={styles.image2} src={figma} alt="logo" />
+            <img style={styles.image2} src={githubicon} alt="logo" />
+            <img style={styles.image2} src={heroku} alt="logo" />
+            <img style={styles.image2} src={netlify} alt="logo" />
+            <img style={styles.image2} src={procreate} alt="logo" />
+          </div>
+        </motion.div>
         {/*<h3 style={styles.p}>MERN</h3>
         <p style={styles.p}>
           Most of the applications or websites I make are created using the MERN
@@ -170,6 +192,9 @@ const styles = {
   },
   image: {
     height: "2.5rem",
+  },
+  image2: {
+    height: "2.3rem",
   },
   photome: {
     height: "100%",

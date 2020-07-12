@@ -6,8 +6,8 @@ import snowboard from "../PorfolioImages/Snowboardcompressed.jpg";
 //import guitar from "../PorfolioImages/guitar2.png";
 import languages from "../PorfolioImages/languages.png";
 
-import serMe from "../PorfolioImages/no-background-big-touched.png";
-
+//import serMe from "../PorfolioImages/no-background-big-touched.png";
+import serMe from "../PorfolioImages/myphoto.png";
 export default class About extends Component {
   pageTransition = {
     in: {

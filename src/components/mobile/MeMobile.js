@@ -9,6 +9,11 @@ import mongo from "../../PorfolioImages/mongo.png";
 import node from "../../PorfolioImages/node.png";
 import reactimage from "../../PorfolioImages/react.png";
 import express from "../../PorfolioImages/express.png";
+import figma from "../../PorfolioImages/figmalogo.png";
+import heroku from "../../PorfolioImages/herokulogo.png";
+import netlify from "../../PorfolioImages/netlifylogo.png";
+import procreate from "../../PorfolioImages/procreatelogo.png";
+import githubicon from "../../icons/github.png";
 
 //--------------------
 
@@ -134,6 +139,23 @@ export default class MeMobile extends Component {
               <img style={styles.image} src={express} alt="logo" />
             </div>
           </motion.div>
+          {/*FRONTEND SECTION*/}
+          <motion.div
+            style={styles.frontcontainer}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ delay: 0.8 }}
+          >
+            <h3 style={styles.p1}>Tools</h3>
+            <div style={styles.image_container}>
+              <img style={styles.image2} src={figma} alt="logo" />
+              <img style={styles.image2} src={netlify} alt="logo" />
+              <img style={styles.image2} src={heroku} alt="logo" />
+              <img style={styles.image2} src={procreate} alt="logo" />
+              <img style={styles.image2} src={githubicon} alt="logo" />
+            </div>
+          </motion.div>
         </div>
         {/*<h3 style={styles.p}>MERN</h3>
         <p style={styles.p}>
@@ -183,14 +205,19 @@ const styles = {
   image: {
     height: "2.5rem",
   },
+  image2: {
+    height: "2.3rem",
+  },
   photome: {
     height: "100%",
   },
   image_container_master: {
-    width: "80%",
+    maxWidth: "80%",
+    minWidth:"80%",
     margin: "auto",
     display: "flex",
     justifyContent: "space-around",
+    overflow:"hidden",
     flexWrap: "wrap",
   },
   frontcontainer: {
@@ -203,6 +230,7 @@ const styles = {
     padding: "20px",
     borderTop: "1.5px solid dodgerblue",
     borderRight: "1.5px solid dodgerblue",
+    width:"60%"
     //backgroundColor:"rgba(30, 143, 255, 0.2)"
   },
   backcontainer: {
@@ -215,6 +243,7 @@ const styles = {
     padding: "20px",
     borderTop: "1.5px solid dodgerblue",
     borderLeft: "1.5px solid dodgerblue",
+    width:"60%"
     //backgroundColor:"rgba(30, 143, 255, 0.2)"
   },
 };

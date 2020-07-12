@@ -42,6 +42,7 @@ export default class App extends Component {
         <Responsive displayIn={["Laptop", "LargerThanLaptop"]}>
           <>
             <Router>
+            <ScrollToTop />
               <SelfIntro />
               <AnimatePresence exitBeforeEnter>
                 <Switch>
@@ -63,6 +64,7 @@ export default class App extends Component {
         <Responsive displayIn={["Tablet"]}>
           <>
             <Router>
+            <ScrollToTop />
               <SelfIntro />
               <AnimatePresence exitBeforeEnter>
                 <Switch>

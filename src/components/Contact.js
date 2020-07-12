@@ -4,7 +4,7 @@ import facebookicon from "../icons/facebook.png";
 import githubicon from "../icons/github.png";
 import linkedinicon from "../icons/linkedin.png";
 import instagramicon from "../icons/instagram.png";
-import sent_icon from "../PorfolioImages/sent_icon.png";
+
 //import axios from "axios";
 
 export default class Contact extends Component {
@@ -235,7 +235,6 @@ export default class Contact extends Component {
           transition={this.pageSettings}
         >
           <h1 style={{ fontFamily: "Roboto" }}>Thank you!</h1>
-          <img src={sent_icon} style={styles.sent_icon} alt="logo" />
           <h2 style={{ fontFamily: "Roboto" }}>Your message has been sent</h2>
           <h2 style={{ fontFamily: "Roboto" }}>
             I will get back to you as soon as possible

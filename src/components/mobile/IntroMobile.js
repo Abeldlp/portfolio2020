@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import logo from "../../PorfolioImages/logo.png";
 //import serMe from "../PorfolioImages/no-background-big-touched.png";
 import { motion } from "framer-motion";
-import Sea from "../../PorfolioImages/sea.jpg";
+//import Sea from "../../PorfolioImages/sea.jpg";
+import SeaOptimized from "../../PorfolioImages/mainbackground.jpg";
 import { Link } from "react-router-dom";
 
 export default class IntroMobile extends Component {
@@ -18,7 +19,7 @@ export default class IntroMobile extends Component {
           width: "100%",
           height: "100vh",
           overflow: "hidden",
-          backgroundImage: "url(" + Sea + ")",
+          backgroundImage: "url(" + SeaOptimized + ")",
           backgroundSize: "cover",
           position: "relative",
         }}
@@ -44,7 +45,7 @@ export default class IntroMobile extends Component {
           >
             ABEL DLP
           </motion.h1>
-          
+
           <motion.h1
             style={styles.fontStyle2}
             initial={{ opacity: 0, y: 0 }}
@@ -71,14 +72,13 @@ export default class IntroMobile extends Component {
 }
 
 const styles = {
-  
   linktext: {
     color: "white",
     padding: 10,
     border: "1.5px solid white",
     fontSize: 30,
-    textAlign:"center",
-    borderRadius:10
+    textAlign: "center",
+    borderRadius: 10,
   },
   logo: {
     width: 80,

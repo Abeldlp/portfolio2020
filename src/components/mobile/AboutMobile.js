@@ -6,7 +6,7 @@ import snowboard from "../../PorfolioImages/Snowboardcompressed.jpg";
 //import guitar from "../PorfolioImages/guitar2.png";
 import languages from "../../PorfolioImages/languages.png";
 
-import serMe from "../../PorfolioImages/no-background-big-touched.png";
+import serMe from "../../PorfolioImages/myphoto.png";
 
 export default class AboutMobile extends Component {
   pageTransition = {
@@ -60,7 +60,7 @@ export default class AboutMobile extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.7 }}
         >
-          <strong>Abel de la Paz (AbelDLP)</strong>
+          <strong style={{fontFamily:"Roboto"}}>Abel de la Paz (AbelDLP)</strong>
         </motion.p>
         <motion.p
           style={styles.pintro}
