@@ -51,7 +51,15 @@ export default class Construction extends Component {
             </p>
           </Link>
         </motion.div>
-        <img src={laptop} alt="logo" style={styles.image} />
+        <motion.img
+          src={laptop}
+          alt="logo"
+          style={styles.image}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 40 }}
+          transition={{ delay: 0.5 }}
+        />
         <motion.h1
           style={{ fontFamily: "Montserrat" }}
           initial={{ opacity: 0, y: 10 }}
@@ -68,9 +76,8 @@ export default class Construction extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.8 }}
         >
-          Local business website. Frontend React, backend Node.js Nodemailer framework.
-          Easy looking but strong design.
-          DEPLOYED WITH HEROKU
+          Local business website. Frontend React, backend Node.js Nodemailer
+          framework. Easy looking but strong design. DEPLOYED WITH HEROKU
         </motion.p>
         <motion.div
           style={{
@@ -98,7 +105,6 @@ export default class Construction extends Component {
           >
             View Live website
           </motion.a>
-
         </motion.div>
       </motion.div>
     );

@@ -77,22 +77,22 @@ export default class MeMobile extends Component {
           transition={{ delay: 0.6 }}
         >
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>{" "}
           Fullstack web developer with great emphasis on responsive design.{" "}
           <br />
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>
           Clean and reusable code throughout the project.
           <br />
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>
           Less is more, pixel-perfect.
           <br />
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>
           Open to learn new libraries for a project.
         </motion.p>

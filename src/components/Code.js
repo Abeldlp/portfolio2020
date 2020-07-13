@@ -3,36 +3,20 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default class Code extends Component {
-  constructor(props) {
-    super(props);
-    this.handleHover = this.handleHover.bind(this);
-    this.handleHoverOut = this.handleHoverOut.bind(this);
-  }
-
   pageTransition = {
     in: {
       opacity: 1,
-      x: 0,
+      y: 0,
     },
     out: {
       opacity: 0,
-      x: "-100%",
+      y: "-100%",
     },
   };
 
   pageSettings = {
-    duration: 1,
-    transition: "linear",
+    duration: 0.5,
   };
-
-  handleHover(e) {
-    e.target.style.boxShadow = "0px 10px 12px 0px rgba(0,0,0,0.5)";
-    e.target.style.transform = "translateY(-5px)";
-  }
-  handleHoverOut(e) {
-    e.target.style.boxShadow = "0px 3px 5px 0px rgba(0,0,0,0.5)";
-    e.target.style.transform = "translateY(5px)";
-  }
 
   render() {
     return (
@@ -59,12 +43,10 @@ export default class Code extends Component {
           <Link to="/code/fitness" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ delay: 0.5 }}
             >
               FITNESS APP
               <br />
@@ -76,12 +58,10 @@ export default class Code extends Component {
           <Link to="/code/construction" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.1 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ delay: 0.6 }}
             >
               CONSTRUCTION
               <br />
@@ -93,16 +73,12 @@ export default class Code extends Component {
           <Link to="/code/salarysystem" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.2 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ delay: 0.7 }}
             >
-              SALARY
-              <br />
-              MANAGER
+              SALARY MANAGER
               <br />
               <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
                 Fullstack
@@ -112,14 +88,12 @@ export default class Code extends Component {
           <Link to="/code/school" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ delay: 0.8 }}
             >
-              SCHOOL <br /> WEBSITE
+              SCHOOL WEBSITE
               <br />
               <span style={{ color: "dodgerblue", letterSpacing: "1px" }}>
                 Frontend
@@ -130,12 +104,10 @@ export default class Code extends Component {
           <Link to="/code/laferrari" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHoverOut}
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.1 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ delay: 0.9 }}
             >
               LA FERRARI
               <br />
@@ -169,7 +141,7 @@ const styles = {
     alignItems: "center",
     cursor: "pointer",
     transition: "all ease-in-out 0.1s",
-    boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.5)",
+    //boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.5)",
     background: "white",
     color: "black",
     fontFamily: "Roboto",
@@ -192,8 +164,7 @@ const styles = {
     zIndex: -1,
   },
   link: {
-    width: "10em",
-    height: "10em",
+    width: "100%",
     borderRadius: 18,
     textDecoration: "none",
     display: "flex",

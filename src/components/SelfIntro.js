@@ -18,8 +18,7 @@ export default class SelfIntro extends Component {
           exit={{ opacity: 0, scale: 0 }}
           transition={{delay: 1}}
         />
-        {/* IMAGE TO COVER FULL SCREEN <div className="self-portrait"></div>*/}
-        {/*<img src={serMe} style={styles.selfMe} alt="logo" /> */}
+        
         <div className="intro-text">
           <h1 style={styles.fontStyle1}>ABEL DLP</h1>
           <h1 style={styles.fontStyle2}>Web Developer</h1>
@@ -89,7 +88,7 @@ const styles = {
     marginBottom: 20,
     position: "relative",
     fontFamily: "Montserrat",
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    backgroundColor: "rgba(30, 143, 255, 0.3)",
     opacity: 1,
   },
   link: {

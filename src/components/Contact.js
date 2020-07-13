@@ -70,17 +70,16 @@ export default class Contact extends Component {
   pageTransition = {
     in: {
       opacity: 1,
-      x: 0,
+      y: 0,
     },
     out: {
       opacity: 0,
-      x: "-100%",
+      y: "-100%",
     },
   };
 
   pageSettings = {
-    duration: 1,
-    transition: "linear",
+    duration: 0.5,
   };
 
   render() {
@@ -101,7 +100,7 @@ export default class Contact extends Component {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1 }}
+              transition={{ delay: 0.6 }}
               style={styles.formitem}
               type="text"
               name="name"
@@ -114,7 +113,7 @@ export default class Contact extends Component {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.1 }}
+              transition={{ delay: 0.7 }}
               style={styles.formitem}
               type="email"
               name="email"
@@ -127,7 +126,7 @@ export default class Contact extends Component {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.2 }}
+              transition={{ delay: 0.8 }}
               style={styles.formitem}
               type="text"
               name="subject"
@@ -140,7 +139,7 @@ export default class Contact extends Component {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.3 }}
+              transition={{ delay: 0.9 }}
               cols="30"
               rows="10"
               placeholder="Drop me your message"
@@ -154,7 +153,7 @@ export default class Contact extends Component {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ delay: 1.4 }}
+              transition={{ delay: 1 }}
               id="sendbutton"
               type="submit"
               value="Send"
@@ -166,16 +165,16 @@ export default class Contact extends Component {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 1.1 }}
           >
             Or add me directly on wassap: +31 627 193 590
           </motion.p>
           <motion.div
             style={styles.sns}
-            initial={{ opacity: 0, width: "100%" }}
+            initial={{ opacity: 0, width: "80%" }}
             animate={{ opacity: 1, width: "50%" }}
-            exit={{ opacity: 0, width: "100%" }}
-            transition={{ delay: 1.5 }}
+            exit={{ opacity: 0, width: "80%" }}
+            transition={{ delay: 1.2 }}
           >
             <a
               href="https://www.facebook.com/kenny.delapaz"

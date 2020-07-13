@@ -21,7 +21,7 @@ export default class About extends Component {
   };
 
   pageSettings = {
-    duration: 1,
+    duration: 0.5,
     transition: "linear",
   };
   render() {
@@ -46,14 +46,14 @@ export default class About extends Component {
             initial={{ transform: "rotate(-180deg)" }}
             animate={{ transform: "rotate(0deg)" }}
             exit={{ transform: "rotate(-180deg)" }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.6 }}
           />
           <motion.p
             style={styles.p}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            transition={{ delay: 1.1 }}
+            transition={{ delay: 0.7 }}
           >
             <strong>Abel de la Paz (AbelDLP)</strong>
             <br />
@@ -67,7 +67,7 @@ export default class About extends Component {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
-          transition={{ delay: 1.1 }}
+          transition={{ delay: 0.7 }}
         >
           <img src={languages} style={styles.languages} alt="logo" />
           <p style={styles.p}>
@@ -80,7 +80,7 @@ export default class About extends Component {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 50 }}
-          transition={{ delay: 1.1 }}
+          transition={{ delay: 0.7 }}
         >
           <img src={computer} style={styles.computer} alt="logo" />
           <p style={styles.p}>
@@ -93,7 +93,7 @@ export default class About extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 0.8 }}
         >
           I love Snowboarding
         </motion.h3>
@@ -102,7 +102,7 @@ export default class About extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1.3 }}
+          transition={{ delay: 0.9 }}
         >
           <img src={snowboard} style={styles.snowboard} alt="logo" />
           <p style={styles.p}>

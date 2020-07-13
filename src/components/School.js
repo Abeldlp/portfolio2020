@@ -51,7 +51,15 @@ export default class School extends Component {
             </p>
           </Link>
         </motion.div>
-        <img src={laptop} alt="logo" style={styles.image} />
+        <motion.img
+          src={laptop}
+          alt="logo"
+          style={styles.image}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 40 }}
+          transition={{ delay: 0.5 }}
+        />
         <motion.h1
           style={{ fontFamily: "Montserrat" }}
           initial={{ opacity: 0, y: 10 }}

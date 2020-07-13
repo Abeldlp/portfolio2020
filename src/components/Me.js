@@ -21,19 +21,16 @@ export default class Me extends Component {
   pageTransition = {
     in: {
       opacity: 1,
-      x: 0,
+      y: 0,
     },
     out: {
       opacity: 0,
-      x: "-100%",
+      y: "-100%",
     },
   };
 
   pageSettings = {
-    duration: 1,
-    transition: {
-      delayChildren: 0.5,
-    },
+    duration: 0.5,
   };
 
   render() {
@@ -63,7 +60,7 @@ export default class Me extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.7 }}
         >
           Path<span style={{ color: "dodgerblue", fontSize: "60px" }}>.</span>
         </motion.h3>
@@ -73,25 +70,25 @@ export default class Me extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1.1 }}
+          transition={{ delay: 0.8 }}
         >
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>{" "}
           Fullstack web developer with great emphasis on responsive design.
           <br />
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>
           Clean and reusable code throughout the project.
           <br />
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>
           Less is more, pixel-perfect.
           <br />
           <span style={{ color: "dodgerblue" }}>
-            <strong>-</strong>
+            <strong>- </strong>
           </span>
           Opened to learn new libraries for a project.
         </motion.p>
@@ -100,7 +97,7 @@ export default class Me extends Component {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 0.9 }}
         >
           <span style={{ color: "dodgerblue" }}>-</span>Skills
           <span style={{ color: "dodgerblue" }}>-</span>
@@ -108,11 +105,11 @@ export default class Me extends Component {
         <div style={styles.image_container_master}>
           {/*FRONTEND SECTION*/}
           <motion.div
-            style={styles.frontbackcontainer}
+            style={styles.frontcontainer}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            transition={{ delay: 1.3 }}
+            transition={{ delay: 1 }}
           >
             <h3 style={styles.p}>Frontend</h3>
             <div style={styles.image_container}>
@@ -125,11 +122,11 @@ export default class Me extends Component {
 
           {/*BACKEND SECTION*/}
           <motion.div
-            style={styles.frontbackcontainer}
+            style={styles.backcontainer}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
-            transition={{ delay: 1.3 }}
+            transition={{ delay: 1 }}
           >
             <h3 style={styles.p}>Backend</h3>
             <div style={styles.image_container}>
@@ -141,10 +138,10 @@ export default class Me extends Component {
         </div>
         {/*TOOLS SECTION*/}
         <motion.div
-          style={styles.frontbackcontainer}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 20 }}
+          style={styles.toolcontainer}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
           transition={{ delay: 1.3 }}
         >
           <h3 style={{ textAlign: "center", fontFamily: "Roboto" }}>Tools</h3>
@@ -175,7 +172,7 @@ const styles = {
   },
   p1: {
     width: "60%",
-    fontFamily: "Roboto",
+    fontFamily: "Montserrat",
   },
   path: {
     width: "60%",
@@ -206,15 +203,33 @@ const styles = {
     justifyContent: "space-around",
     flexWrap: "wrap",
   },
-  frontbackcontainer: {
+  frontcontainer: {
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-    padding: "20px",
+    padding: "10px",
     borderTop: "1.5px solid dodgerblue",
-    //backgroundColor:"rgba(30, 143, 255, 0.2)"
+  },
+  backcontainer: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    padding: "10px",
+    borderTop: "1.5px solid dodgerblue",
+  },
+  toolcontainer: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    borderTop: "1.5px solid dodgerblue",
   },
 };
