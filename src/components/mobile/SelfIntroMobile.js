@@ -50,11 +50,10 @@ export default class SelfIntroMobile extends Component {
             animate={this.state.open ? "open" : "closed"}
             transition={{ duration: 0.1 }}
             style={{
-              height: "30px",
+              height: "25px",
               width: "20px",
             }}
           />
-          
         </motion.div>
         <motion.div
           style={styles.container2}
@@ -62,12 +61,7 @@ export default class SelfIntroMobile extends Component {
           initial={{ opacity: 0 }}
           animate={this.state.open ? "open" : "closed"}
         >
-          <img
-            src={logo}
-            style={styles.logo}
-            alt="logo"
-            
-          />
+          <img src={logo} style={styles.logo} alt="logo" />
           <Link onClick={this.openMenuBar} style={styles.link} to="/me">
             ME
           </Link>
@@ -86,7 +80,7 @@ export default class SelfIntroMobile extends Component {
             style={styles.link}
             to="/ilustrations"
           >
-            ILUSTRATIONS
+            ART
           </Link>
           <Link onClick={this.openMenuBar} style={styles.link} to="/contact">
             CONTACT
@@ -111,13 +105,13 @@ const variants3 = {
   closed: { opacity: 1, transition: { delay: 0.3 } },
 };
 
-const styles = {logo: {
-  width: 80,
-  height: 80,
-  margin: "auto",
-  padding:"20px"
-  
-},
+const styles = {
+  logo: {
+    width: 80,
+    height: 80,
+    margin: "auto",
+    padding: "20px",
+  },
   navbar_container: {
     display: "flex",
     height: "50px",

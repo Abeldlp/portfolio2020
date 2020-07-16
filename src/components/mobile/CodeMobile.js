@@ -43,7 +43,7 @@ export default class CodeMobile extends Component {
           width: "100%",
         }}
       >
-        <h1 style={{ fontFamily: "Montserrat", color: "dodgerblue" }}>
+        <h1 style={{ fontFamily: "Montserrat", color: "dodgerblue", paddingTop: "15px" }}>
           Projects
         </h1>
         <p

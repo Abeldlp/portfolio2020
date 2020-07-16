@@ -40,7 +40,7 @@ export default class AboutMobile extends Component {
           overflow: "hidden",
         }}
       >
-        <h1 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
+        <h1 style={{ fontFamily: "Montserrat", textAlign: "center", paddingTop: "15px" }}>
           Personal Info
           <span style={{ color: "dodgerblue", fontSize: "60px" }}>.</span>
         </h1>

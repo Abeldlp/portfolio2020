@@ -39,7 +39,13 @@ export default class Code extends Component {
           width: "100%",
         }}
       >
-        <h1 style={{ fontFamily: "Montserrat", color: "dodgerblue" }}>
+        <h1
+          style={{
+            fontFamily: "Montserrat",
+            color: "dodgerblue",
+            paddingTop: "15px",
+          }}
+        >
           Ilustrations
         </h1>
         <p
@@ -60,8 +66,8 @@ export default class Code extends Component {
             textAlign: "center",
           }}
         >
-          Most of this ilustrations have been made using procreate. The quality
-          of the image has been compressed for a better experience.
+          The ilustrations below were made using procreate. The quality of the
+          image has been compressed for a better experience.
         </p>
         <motion.div style={styles.main_container}>
           <motion.img
@@ -117,7 +123,7 @@ const styles = {
   secondary_container: {
     margin: "10px",
     maxWidth: "80%",
-    maxHeight: "80%",
+    maxHeight: "40vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

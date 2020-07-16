@@ -48,7 +48,7 @@ export default class MeMobile extends Component {
         <h1
           style={{
             fontFamily: "Montserrat",
-            textAlign: "center",
+            textAlign: "center", paddingTop: "15px"
           }}
         >
           <span style={{ color: "dodgerblue", fontSize: "30px" }}>

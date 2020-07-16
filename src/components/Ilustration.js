@@ -38,8 +38,8 @@ export default class Code extends Component {
           Ilustrations for web designs
         </p>
         <p style={{ width: "80%", paddingBottom: 10, fontFamily: "Roboto" }}>
-          Most of this ilustrations have been made using procreate. The quality
-          of the image has been compressed for a better experience.
+          The ilustrations below were made using procreate. The quality of the
+          image has been compressed for a better experience.
         </p>
         <motion.div style={styles.main_container}>
           <motion.img
@@ -95,7 +95,7 @@ const styles = {
   secondary_container: {
     margin: "10px",
     maxWidth: "80%",
-    maxHeight: "80%",
+    maxHeight: "400px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
