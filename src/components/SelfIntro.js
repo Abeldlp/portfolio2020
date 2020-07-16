@@ -40,6 +40,9 @@ export default class SelfIntro extends Component {
           <Link to="/code" id="nav-item">
             Projects
           </Link>
+          <Link to="/ilustrations" id="nav-item">
+            Art
+          </Link>
           <Link to="/contact" id="nav-item">
             Contact
           </Link>

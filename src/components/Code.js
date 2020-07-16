@@ -147,7 +147,7 @@ const styles = {
     fontFamily: "Roboto",
     borderBottomLeftRadius: "10px",
     borderBottomRightRadius: "10px",
-    borderTop: "3px solid dodgerblue",
+    borderTop: "1.5px solid dodgerblue",
     fontWeight: "bold",
   },
   icon: {

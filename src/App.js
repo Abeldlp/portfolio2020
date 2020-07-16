@@ -13,6 +13,7 @@ import Me from "./components/Me";
 import About from "./components/About";
 import Code from "./components/Code";
 import Contact from "./components/Contact";
+import Ilustration from "./components/Ilustration"
 
 //Import project selfpages
 import Fitness from "./components/Fitness";
@@ -33,6 +34,7 @@ import SchoolMobile from "./components/mobile/SchoolMobile";
 import ConstructionMobile from "./components/mobile/ConstructionMobile";
 import SalaryManagerMobile from "./components/mobile/SalaryManagerMobile";
 import LaFerrariMobile from "./components/mobile/LaFerrariMobile";
+import IlustrationMobile from "./components/mobile/IlustrationMobile"
 
 export default class App extends Component {
   render() {
@@ -55,6 +57,7 @@ export default class App extends Component {
                   <Route path="/code/salarysystem" component={SalarySystem} />
                   <Route path="/code/laferrari" component={LaFerrari} />
                   <Route path="/contact" component={Contact} />
+                  <Route path="/ilustrations" component={Ilustration} />
                 </Switch>
               </AnimatePresence>
             </Router>
@@ -68,10 +71,16 @@ export default class App extends Component {
               <SelfIntro />
               <AnimatePresence exitBeforeEnter>
                 <Switch>
-                  <Route path="/" exact component={Me} />
+                <Route path="/" exact component={Me} />
                   <Route path="/about" component={About} />
-                  <Route path="/code" component={Code} />
+                  <Route path="/code" exact component={Code} />
+                  <Route path="/code/fitness" component={Fitness} />
+                  <Route path="/code/construction" component={Construction} />
+                  <Route path="/code/school" component={School} />
+                  <Route path="/code/salarysystem" component={SalarySystem} />
+                  <Route path="/code/laferrari" component={LaFerrari} />
                   <Route path="/contact" component={Contact} />
+                  <Route path="/ilustrations" component={Ilustration} />
                 </Switch>
               </AnimatePresence>
             </Router>
@@ -89,6 +98,7 @@ export default class App extends Component {
                   <Route path="/me" component={MeMobile} />
                   <Route path="/about/mobile" component={AboutMobile} />
                   <Route path="/contact" component={ContactMobile} />
+                  <Route path="/ilustrations" component={IlustrationMobile} />
                   <Route path="/projects" exact component={CodeMobile} />
                   <Route
                     path="/projects/fitnessapp"

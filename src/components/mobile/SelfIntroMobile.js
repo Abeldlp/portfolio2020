@@ -88,6 +88,13 @@ export default class SelfIntroMobile extends Component {
           <Link onClick={this.openMenuBar} style={styles.link} to="/projects">
             PROJECTS
           </Link>
+          <Link
+            onClick={this.openMenuBar}
+            style={styles.link}
+            to="/ilustrations"
+          >
+            ILUSTRATIONS
+          </Link>
           <Link onClick={this.openMenuBar} style={styles.link} to="/contact">
             CONTACT
           </Link>
