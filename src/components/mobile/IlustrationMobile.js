@@ -15,7 +15,7 @@ export default class Code extends Component {
     out: {
       opacity: 0,
       //scale: 0,
-      y: "100%",
+      y: "-100%",
     },
   };
 

@@ -54,14 +54,7 @@ export default class SelfIntroMobile extends Component {
               width: "20px",
             }}
           />
-          {/* 
-        <div style={styles.navbar}>
-          <Link to="/">Home</Link>
-          <Link to="/me">ME</Link>
-          <Link to="/about">About</Link>
-          <Link to="/Code">Code</Link>
-          <Link to="/conact">Contact</Link>
-        </div> */}
+          
         </motion.div>
         <motion.div
           style={styles.container2}
