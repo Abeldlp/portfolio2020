@@ -46,7 +46,7 @@ export default class Code extends Component {
             paddingTop: "15px",
           }}
         >
-          Ilustrations
+          Illustrations
         </h1>
         <p
           style={{
@@ -56,7 +56,7 @@ export default class Code extends Component {
             textAlign: "center",
           }}
         >
-          Ilustrations for web designs
+          Illustrations for web designs
         </p>
         <p
           style={{
@@ -66,7 +66,7 @@ export default class Code extends Component {
             textAlign: "center",
           }}
         >
-          The ilustrations below were made using procreate. The quality of the
+          The illustrations below were made using procreate. The quality of the
           image has been compressed for a better experience.
         </p>
         <motion.div style={styles.main_container}>

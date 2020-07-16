@@ -32,13 +32,13 @@ export default class Code extends Component {
         transition={this.pageSettings}
       >
         <h1 style={{ fontFamily: "Montserrat", color: "dodgerblue" }}>
-          Ilustrations
+          Illustrations
         </h1>
         <p style={{ width: "80%", paddingBottom: 10, fontFamily: "Roboto" }}>
-          Ilustrations for web designs
+          Illustrations for web designs
         </p>
         <p style={{ width: "80%", paddingBottom: 10, fontFamily: "Roboto" }}>
-          The ilustrations below were made using procreate. The quality of the
+          The illustrations below were made using procreate. The quality of the
           image has been compressed for a better experience.
         </p>
         <motion.div style={styles.main_container}>
