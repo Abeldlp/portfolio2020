@@ -158,13 +158,13 @@ const styles = {
     borderBottom: "1.5px solid dodgerblue",
   },
   computer: {
-    maxHeight:"40%",
-    maxWidth:"20%",
+    maxHeight: "40%",
+    maxWidth: "80px",
     borderRadius: 10,
   },
   snowboard: {
     maxHeight: "60%",
-    maxWidth:"100%",
+    maxWidth: "300px",
     borderRadius: "5px",
     boxShadow: "0px 5px 10px 2px lightgrey",
   },
@@ -175,14 +175,14 @@ const styles = {
     textAlign: "left",
   },
   languages: {
-    maxHeight:"60%",
-    maxWidth: "20%",
+    maxHeight: "60%",
+    maxWidth: "80px",
     opacity: 0.8,
   },
   serMe: {
-    
-    maxHeight:"100%",
-    maxWidth:"30%",
+    width: "30%",
+    maxHeight: "140px",
+    maxWidth: "140px",
     borderRadius: "100%",
     boxShadow: "0px 5px 10px 2px lightgrey",
   },

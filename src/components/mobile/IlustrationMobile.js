@@ -43,7 +43,7 @@ export default class Code extends Component {
           style={{
             fontFamily: "Montserrat",
             color: "dodgerblue",
-            paddingTop: "15px",
+            paddingTop: "35px",
           }}
         >
           Illustrations
@@ -66,7 +66,7 @@ export default class Code extends Component {
             textAlign: "center",
           }}
         >
-          The illustrations below were made using procreate. The quality of the
+          The illustrations below were made with procreate. The quality of the
           image has been compressed for a better experience.
         </p>
         <motion.div style={styles.main_container}>
