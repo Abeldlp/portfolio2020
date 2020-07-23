@@ -4,6 +4,7 @@ import ilustration1 from "../../PorfolioImages/ilustration1-min.png";
 import ilustration2 from "../../PorfolioImages/ilustration2-min.png";
 import ilustration3 from "../../PorfolioImages/ilustration3-min.png";
 import ilustration4 from "../../PorfolioImages/ilustration4-min.png";
+import spongebob from "../../PorfolioImages/spongebob.png";
 
 export default class Code extends Component {
   pageTransition = {
@@ -76,7 +77,7 @@ export default class Code extends Component {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ delay: 0.5 }}
-            src={ilustration3}
+            src={ilustration1}
           />
 
           <motion.img
@@ -85,6 +86,15 @@ export default class Code extends Component {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ delay: 0.6 }}
+            src={spongebob}
+          />
+
+          <motion.img
+            style={styles.secondary_container}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ delay: 0.7 }}
             src={ilustration2}
           />
 
@@ -94,7 +104,7 @@ export default class Code extends Component {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ delay: 0.8 }}
-            src={ilustration1}
+            src={ilustration3}
           />
 
           <motion.img
