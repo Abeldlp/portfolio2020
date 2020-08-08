@@ -265,7 +265,6 @@ const styles = {
     padding: 10,
     margin: 10,
     outline: "none",
-    borderRadius: 18,
     border: "solid 1px dodgerblue",
     resize: "none",
     fontFamily: "Montserrat",

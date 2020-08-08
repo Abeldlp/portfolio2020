@@ -14,6 +14,11 @@ import heroku from "../../PorfolioImages/herokulogo.png";
 import netlify from "../../PorfolioImages/netlifylogo.png";
 import procreate from "../../PorfolioImages/procreatelogo.png";
 import githubicon from "../../icons/github.png";
+import jQuery from "../../PorfolioImages/jQuery-logo.png";
+import Boot from "../../PorfolioImages/bootstrap.png";
+import sql from "../../PorfolioImages/pngegg.png";
+import php from "../../PorfolioImages/php.png";
+import laravel from "../../PorfolioImages/laravel.png";
 
 //--------------------
 
@@ -48,7 +53,8 @@ export default class MeMobile extends Component {
         <h1
           style={{
             fontFamily: "Montserrat",
-            textAlign: "center", paddingTop: "15px"
+            textAlign: "center",
+            paddingTop: "15px",
           }}
         >
           <span style={{ color: "dodgerblue", fontSize: "30px" }}>
@@ -76,25 +82,10 @@ export default class MeMobile extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.6 }}
         >
-          <span style={{ color: "dodgerblue" }}>
-            <strong>- </strong>
-          </span>{" "}
-          Fullstack web developer with great emphasis on responsive design.{" "}
-          <br />
-          <span style={{ color: "dodgerblue" }}>
-            <strong>- </strong>
-          </span>
-          Clean and reusable code throughout the project.
-          <br />
-          <span style={{ color: "dodgerblue" }}>
-            <strong>- </strong>
-          </span>
-          Less is more, pixel-perfect.
-          <br />
-          <span style={{ color: "dodgerblue" }}>
-            <strong>- </strong>
-          </span>
-          Open to learn new libraries for a project.
+          Experienced fullstack web developer creating beautiful designs on the
+          frontend and keeping a clean and scalable code on the backend. Coding
+          pure Javascript or php is not a problem, but for more effectiveness I
+          like using libraries like React , Express or frameworks like Laravel.
         </motion.p>
         <motion.h3
           style={styles.pskill}
@@ -117,10 +108,30 @@ export default class MeMobile extends Component {
           >
             <h3 style={styles.p1}>Frontend</h3>
             <div style={styles.image_container}>
-              <img style={styles.image} src={html} alt="logo" />
-              <img style={styles.image} src={css} alt="logo" />
-              <img style={styles.image} src={javascript} alt="logo" />
-              <img style={styles.image} src={reactimage} alt="logo" />
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={html} alt="logo" />
+                <p style={styles.plogo}>HTML</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={css} alt="logo" />
+                <p style={styles.plogo}>CSS</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={javascript} alt="logo" />
+                <p style={styles.plogo}>JavaScript</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={reactimage} alt="logo" />
+                <p style={styles.plogo}>React</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={jQuery} alt="logo" />
+                <p style={styles.plogo}>jQuery</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={Boot} alt="logo" />
+                <p style={styles.plogo}>Bootstrap</p>
+              </div>
             </div>
           </motion.div>
 
@@ -134,9 +145,30 @@ export default class MeMobile extends Component {
           >
             <h3 style={styles.p1}>Backend</h3>
             <div style={styles.image_container}>
-              <img style={styles.image} src={mongo} alt="logo" />
-              <img style={styles.image} src={node} alt="logo" />
-              <img style={styles.image} src={express} alt="logo" />
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={node} alt="logo" />
+                <p style={styles.plogo}>Node.js</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={mongo} alt="logo" />
+                <p style={styles.plogo}>MongoDB</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={express} alt="logo" />
+                <p style={styles.plogo}>Express</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={sql} alt="logo" />
+                <p style={styles.plogo}>SQL</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={laravel} alt="logo" />
+                <p style={styles.plogo}>Laravel</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={php} alt="logo" />
+                <p style={styles.plogo}>PHP</p>
+              </div>
             </div>
           </motion.div>
           {/*FRONTEND SECTION*/}
@@ -149,11 +181,26 @@ export default class MeMobile extends Component {
           >
             <h3 style={styles.p1}>Tools</h3>
             <div style={styles.image_container}>
-              <img style={styles.image2} src={figma} alt="logo" />
-              <img style={styles.image2} src={netlify} alt="logo" />
-              <img style={styles.image2} src={heroku} alt="logo" />
-              <img style={styles.image2} src={procreate} alt="logo" />
-              <img style={styles.image2} src={githubicon} alt="logo" />
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={figma} alt="logo" />
+                <p style={styles.plogo}>Figma</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={githubicon} alt="logo" />
+                <p style={styles.plogo}>Github</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={heroku} alt="logo" />
+                <p style={styles.plogo}>Heroku</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={netlify} alt="logo" />
+                <p style={styles.plogo}>Netlify</p>
+              </div>
+              <div style={styles.logo_container}>
+                <img style={styles.image} src={procreate} alt="logo" />
+                <p style={styles.plogo}>Procreate</p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -188,6 +235,16 @@ const styles = {
     textAlign: "center",
     margin: "15px auto",
   },
+  plogo: {
+    fontFamily: "Roboto",
+    textAlign: "right",
+  },
+  logo_container: {
+    display: "flex",
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
   path: {
     width: "80%",
     fontFamily: "Montserrat",
@@ -200,7 +257,8 @@ const styles = {
     padding: 10,
     display: "flex",
     justifyContent: "space-around",
-    alignItems: "center",
+    alignItems: "start",
+    flexDirection: "column",
   },
   image: {
     height: "2.5rem",
@@ -213,11 +271,11 @@ const styles = {
   },
   image_container_master: {
     maxWidth: "80%",
-    minWidth:"80%",
+    minWidth: "80%",
     margin: "auto",
     display: "flex",
     justifyContent: "space-around",
-    overflow:"hidden",
+    overflow: "hidden",
     flexWrap: "wrap",
   },
   frontcontainer: {
@@ -230,7 +288,7 @@ const styles = {
     padding: "20px",
     borderTop: "1.5px solid dodgerblue",
     borderRight: "1.5px solid dodgerblue",
-    width:"60%"
+    width: "60%",
     //backgroundColor:"rgba(30, 143, 255, 0.2)"
   },
   backcontainer: {
@@ -243,7 +301,7 @@ const styles = {
     padding: "20px",
     borderTop: "1.5px solid dodgerblue",
     borderLeft: "1.5px solid dodgerblue",
-    width:"60%"
+    width: "60%",
     //backgroundColor:"rgba(30, 143, 255, 0.2)"
   },
 };

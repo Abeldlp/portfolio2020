@@ -107,21 +107,10 @@ export default class About extends Component {
           <img src={snowboard} style={styles.snowboard} alt="logo" />
           <p style={styles.p}>
             The best way for me to stay active is Snowbarding. Luckily I had the
-            chance to spend 4 years of my life as a profesional snowboarder in
-            Japan. This photo was taken in Japan, Hakuba ski resort. <br />
-            長野県白馬47スキー場
+            chance to spend 4 years of my life as a profesional snowboarder.
+            This photo was taken in Hakuba ski resort. 長野県白馬47スキー場
           </p>
         </motion.div>
-        {/* 
-        <div style={styles.divleft}>
-          <p style={styles.p}>
-            Music is something I loved since a really young age. I started
-            playing guitar since I was 11 and have never stoped since then. A
-            good tune is always relaxing in stressful times.
-          </p>
-          <img src={guitar} style={styles.guitar} alt="logo" />
-        </div>
-        */}
       </motion.div>
     );
   }

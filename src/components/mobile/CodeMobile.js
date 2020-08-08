@@ -4,6 +4,8 @@ import { Accordion } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
 
+import laptop from "../../PorfolioImages/weightless.png";
+
 export default class CodeMobile extends Component {
   constructor(props) {
     super(props);
@@ -43,7 +45,13 @@ export default class CodeMobile extends Component {
           width: "100%",
         }}
       >
-        <h1 style={{ fontFamily: "Montserrat", color: "dodgerblue", paddingTop: "15px" }}>
+        <h1
+          style={{
+            fontFamily: "Montserrat",
+            color: "dodgerblue",
+            paddingTop: "15px",
+          }}
+        >
           Projects
         </h1>
         <p
@@ -68,8 +76,78 @@ export default class CodeMobile extends Component {
           slow, when you click on view live page, be patient while it loads.
           Thank you.
         </p>
+
+        <motion.img
+          src={laptop}
+          alt="logo"
+          style={styles.image}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 40 }}
+          transition={{ delay: 0.5 }}
+        />
+
+        <p style={{ width: "80%", padding: 10, fontFamily: "Roboto" }}>
+          This is my latest project in progress. A fullstack application to keep
+          track of your weight in graphs, and save records of your daily
+          excercising.
+        </p>
+
+        {/*Main project buttons */}
+        <motion.div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            width: "60%",
+            flexDirection: "column",
+          }}
+        >
+          <motion.a
+            href="https://youtu.be/EneWMa82oFQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ delay: 0.9 }}
+            style={{
+              fontFamily: "Roboto",
+              color: "white",
+              textDecoration: "none",
+              backgroundColor: "dodgerblue",
+              padding: "10px",
+            }}
+          >
+            Watch video
+          </motion.a>
+          <motion.a
+            href="https://github.com/Abeldlp/weightless"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ delay: 0.9 }}
+            style={{
+              fontFamily: "Roboto",
+              color: "dodgerblue",
+              textDecoration: "none",
+              backgroundColor: "white",
+              padding: "10px",
+              fontWeight: "bold",
+            }}
+          >
+            View Source Code
+          </motion.a>
+        </motion.div>
+
+        <h2 style={{ fontFamily: "Montserrat", padding: "20px 0" }}>
+          Other Projects
+        </h2>
+        
         <motion.div style={styles.main_container}>
-        <Link to="/projects/salarymanager" style={styles.link}>
+          <Link to="/projects/salarymanager" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
               initial={{ opacity: 0, y: -10 }}
@@ -139,8 +217,7 @@ export default class CodeMobile extends Component {
               </span>
             </motion.div>
           </Link>
-          
-          
+
           <Link to="/projects/laferrari" style={styles.link}>
             <motion.div
               style={styles.secondary_container}
@@ -156,7 +233,6 @@ export default class CodeMobile extends Component {
               </span>
             </motion.div>
           </Link>
-          
         </motion.div>
         <Accordion />
       </motion.div>
@@ -165,6 +241,11 @@ export default class CodeMobile extends Component {
 }
 
 const styles = {
+  image: {
+    width: "80%",
+    paddingBottom: "20px",
+    boxShadow: "2px 14px 31px -13px rgba(0,0,0,0.75)",
+  },
   main_container: {
     display: "flex",
     justifyContent: "space-around",

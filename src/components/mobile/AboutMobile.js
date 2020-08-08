@@ -40,7 +40,13 @@ export default class AboutMobile extends Component {
           overflow: "hidden",
         }}
       >
-        <h1 style={{ fontFamily: "Montserrat", textAlign: "center", paddingTop: "15px" }}>
+        <h1
+          style={{
+            fontFamily: "Montserrat",
+            textAlign: "center",
+            paddingTop: "15px",
+          }}
+        >
           Personal Info
           <span style={{ color: "dodgerblue", fontSize: "60px" }}>.</span>
         </h1>
@@ -60,7 +66,9 @@ export default class AboutMobile extends Component {
           exit={{ opacity: 0, y: 10 }}
           transition={{ delay: 0.7 }}
         >
-          <strong style={{fontFamily:"Roboto"}}>Abel de la Paz (AbelDLP)</strong>
+          <strong style={{ fontFamily: "Roboto" }}>
+            Abel de la Paz (AbelDLP)
+          </strong>
         </motion.p>
         <motion.p
           style={styles.pintro}
@@ -130,10 +138,9 @@ export default class AboutMobile extends Component {
         >
           <img src={snowboard} style={styles.snowboard} alt="logo" />
           <p style={styles.pintro}>
-            The best way for me to stay
-            active is Snowbarding. Luckily I had the chance to spend 4 years of
-            my life as a profesional snowboarder in Japan. This photo was taken
-            in Japan, Hakuba ski resort. <br />
+            The best way for me to stay active is Snowbarding. Luckily I had the
+            chance to spend 4 years of my life as a profesional snowboarder.
+            This photo was taken in Hakuba ski resort. <br />
             長野県白馬47スキー場
           </p>
         </motion.div>

@@ -53,7 +53,7 @@ export default class Code extends Component {
             src={spongebob}
           />
 
-<motion.img
+          <motion.img
             style={styles.secondary_container}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
